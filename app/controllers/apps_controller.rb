@@ -4,4 +4,8 @@ class AppsController < ApplicationController
     @apps = App.all
   end
 
+  def show
+    @app = App.find(params[:id])
+  end
+
 end

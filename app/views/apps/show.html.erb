@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <h2><%= @app.name %></h2>
+
+      <div class="row">
+        <div class="col-sm-2 col-md-3 col-lg-4">
+          <%= render 'apps/sidebar' %>
+        </div>
+
+        <div class="col-sm-10 col-md-9 col-lg-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Latest Build</h3>
+            </div>
+            <div class="panel-body">
+              <%= render 'builds/notes' %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

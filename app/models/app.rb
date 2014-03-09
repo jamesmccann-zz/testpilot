@@ -4,4 +4,8 @@ class App < ActiveRecord::Base
 
   validates :name, presence: true
 
+  def latest_build
+    builds.last
+  end
+
 end

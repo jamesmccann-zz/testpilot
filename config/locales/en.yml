@@ -1,4 +1,7 @@
 en:
   navigation:
-    title: "Testpilot"
-    apps: "Apps"
+    title: 'Testpilot'
+    apps: 'Apps'
+  app:
+    builds:
+      none: 'No builds have been uploaded yet'

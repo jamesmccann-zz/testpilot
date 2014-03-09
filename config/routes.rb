@@ -3,7 +3,10 @@ Testpilot::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :apps do
-    resources :builds
+    resources :builds, :only => [:new, :create, :edit, :update]
+    member do
+      get 'builds'
+    end
   end
 
   # You can have the root of your site routed with "root"

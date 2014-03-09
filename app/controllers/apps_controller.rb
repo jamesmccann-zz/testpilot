@@ -34,6 +34,10 @@ class AppsController < ApplicationController
     end
   end
 
+  def builds
+    @app = App.find(params[:id])
+  end
+
   private
 
   def app_params

@@ -11,7 +11,7 @@ class APKUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    "#{model.app_name}-#{model.number}" if original_filename
+    "#{model.app_name}-#{model.number}.apk".downcase if original_filename
   end
 
 end

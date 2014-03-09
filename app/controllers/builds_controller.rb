@@ -15,6 +15,11 @@ class BuildsController < ApplicationController
     end
   end
 
+  def apk_download
+    build = Build.find(params[:build_id])
+    send_file build.apk.path
+  end
+
   private
 
   def build_params

@@ -1,11 +1,12 @@
 Testpilot::Application.routes.draw do
 
-  resources :apps do
-    resources :builds, :only => [:new, :create] do
-      get 'apk' => 'builds#apk_download'
-    end
-    member do
-      get 'builds'
+  scope :api, constraints: {format: :json} do
+    resources :apps, only: [:index, :show] do
+      resources :builds, :only => [:new, :create] do
+        member do
+          get :download
+        end
+      end
     end
   end
 

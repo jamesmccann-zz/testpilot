@@ -1,4 +1,4 @@
-source 'https://rubygems.rc'
+source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'pg'
@@ -9,6 +9,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
 
 # Use debugger
 gem 'debugger', group: [:development, :test]

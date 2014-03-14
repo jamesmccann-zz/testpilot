@@ -9,7 +9,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass-rails'
+gem 'font-awesome-sass'
 gem 'marionette-rails'
 gem 'rails-backbone'
 

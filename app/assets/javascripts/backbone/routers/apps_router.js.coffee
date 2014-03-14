@@ -1,7 +1,7 @@
 class Testpilot.Routers.AppsRouter extends Backbone.Router
   initialize: (options) ->
     @apps = new Testpilot.Collections.AppsCollection()
-    @apps.reset options.apps
+    @apps.fetch(reset: true)
 
   routes:
     "index"    : "index"

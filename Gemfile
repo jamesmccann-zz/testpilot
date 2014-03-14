@@ -9,5 +9,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # Use debugger
 gem 'debugger', group: [:development, :test]

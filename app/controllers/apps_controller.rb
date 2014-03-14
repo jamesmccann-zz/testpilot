@@ -2,6 +2,10 @@ class AppsController < ApplicationController
 
   def index
     @apps = App.all
+    respond_to do |format|
+      format.html
+      format.json { render }
+    end
   end
 
   def new
@@ -19,6 +23,10 @@ class AppsController < ApplicationController
 
   def show
     @app = App.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render }
+    end
   end
 
   def edit
@@ -36,6 +44,10 @@ class AppsController < ApplicationController
 
   def builds
     @app = App.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render }
+    end
   end
 
   private

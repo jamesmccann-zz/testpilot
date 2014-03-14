@@ -1,15 +1,14 @@
 Testpilot::Application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
   resources :apps do
-    resources :builds, :only => [:new, :create, :edit, :update]
+    resources :builds, :only => [:new, :create] do
+      get 'apk' => 'builds#apk_download'
+    end
     member do
       get 'builds'
     end
   end
 
-  # You can have the root of your site routed with "root"
   root 'apps#index'
 
 end

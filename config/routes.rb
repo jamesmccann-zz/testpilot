@@ -10,6 +10,6 @@ Testpilot::Application.routes.draw do
     end
   end
 
-  root 'apps#index'
+  root 'testpilot#show'
 
 end

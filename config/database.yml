@@ -1,13 +1,11 @@
 development:
   adapter: postgresql
   database: testpilot-dev
-  user: james
   encoding: unicode
 
 test:
   adapter: postgresql
   database: testpilot-test
-  user: james
   encoding: unicode
 
 

@@ -8,4 +8,8 @@ class App < ActiveRecord::Base
     builds.last
   end
 
+  def to_param
+    @app.parameterize
+  end
+
 end

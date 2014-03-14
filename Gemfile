@@ -9,6 +9,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 
+gem 'bootstrap-sass'
+gem 'marionette-rails'
+gem 'rails-backbone'
+
 group :development, :test do
   gem 'rspec-rails'
 end

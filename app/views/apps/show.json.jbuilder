@@ -1,3 +1,3 @@
-json.app do
-  json.partial!('app', app: app)
+json.cache! @app do
+  json.partial! @app
 end

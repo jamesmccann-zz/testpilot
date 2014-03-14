@@ -15,6 +15,7 @@ class Build < ActiveRecord::Base
 
   def set_build_number
     return if self.number
+    return unless app
     self.number = app.builds.count+1
     self.save
   end

@@ -1,11 +1,16 @@
 #= require_self
+#= require_tree ./initializers
 #= require_tree ./templates
 #= require_tree ./models
 #= require_tree ./views
 #= require_tree ./routers
 
-window.Testpilot =
-  Models: {}
-  Collections: {}
-  Routers: {}
-  Views: {}
+@Testpilot = new Marionette.Application()
+
+Backbone.Marionette.Renderer.render = (template, data)->
+  JST["dot_ledger/templates/#{template}"](data)
+
+@Testpilot.Models = {}
+@Testpilot.Collections = {}
+@Testpilot.Routers = {}
+@Testpilot.Views = {}

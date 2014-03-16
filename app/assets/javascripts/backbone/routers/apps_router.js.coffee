@@ -1,12 +1,13 @@
-class Testpilot.Routers.AppsRouter extends Backbone.Router
-  initialize: (options) ->
-    @apps = new Testpilot.Collections.AppsCollection()
-    @apps.fetch(reset: true)
-
+class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
   routes:
+    ''         : 'root'
     "index"    : "index"
     ":id"      : "show"
-    ".*"        : "index"
+    ".*"       : "index"
+
+  root: ->
+    @apps = new Testpilot.Collections.AppsCollection()
+    @apps.fetch(reset: true)
 
   index: ->
     @view = new Testpilot.Views.Apps.IndexView(apps: @apps)

@@ -8,7 +8,7 @@
 @Testpilot = new Marionette.Application()
 
 Backbone.Marionette.Renderer.render = (template, data)->
-  JST["dot_ledger/templates/#{template}"](data)
+  JST["backbone/templates/#{template}"](data)
 
 @Testpilot.Models = {}
 @Testpilot.Collections = {}

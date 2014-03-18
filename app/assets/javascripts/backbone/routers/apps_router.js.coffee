@@ -8,7 +8,7 @@ class Testpilot.Routers.AppRouter extends Backbone.Marionette.AppRouter
     @apps = new Testpilot.Collections.AppsCollection()
     @apps.fetch
       success: =>
-        @view = new Testpilot.Views.Apps.ListView(apps: @apps)
+        @view = new Testpilot.Views.Apps.ListView(collection: @apps)
         $("#apps").html(@view.render().el)
 
   show: (id) ->

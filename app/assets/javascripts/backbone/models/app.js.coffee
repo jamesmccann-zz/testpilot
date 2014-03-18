@@ -1,4 +1,5 @@
 class Testpilot.Models.App extends Backbone.Model
+  urlRoot: 'api/apps'
   paramRoot: 'app'
   defaults: {}
 

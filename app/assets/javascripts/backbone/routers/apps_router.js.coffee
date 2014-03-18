@@ -12,7 +12,9 @@ class Testpilot.Routers.AppRouter extends Backbone.Marionette.AppRouter
         $("#apps").html(@view.render().el)
 
   show: (id) ->
-    app = @apps.get(id)
-    @view = new Testpilot.Views.Apps.ShowView(model: app)
-    $("#apps").html(@view.render().el)
+    app = new Testpilot.Models.App(id: id)
+    app.fetch
+      success: =>
+        @view = new Testpilot.Views.Apps.ShowView(model: app)
+        $("#apps").html(@view.render().el)
 

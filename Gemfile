@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
+gem 'devise'
 
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-sass'
@@ -16,6 +17,7 @@ gem 'rails-backbone'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 # Use debugger

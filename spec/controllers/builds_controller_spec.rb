@@ -7,6 +7,17 @@ describe BuildsController do
   let(:app) { FactoryGirl.build(:app, :with_single_build) }
   let(:build) { app.builds.first }
 
+  describe "GET index" do
+    before do
+      App.stub(find: app)
+      app.builds.stub(all: [build])
+      get :index, app_id: 1
+    end
+
+    it { response.should render_template :index }
+    it { assigns(:builds).should eq [build] }
+  end
+
   describe "GET show" do
     before do
       App.stub(find: app)

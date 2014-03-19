@@ -4,7 +4,13 @@ class BuildsController < ApplicationController
   before_action :assign_app_from_token!, only: :create
   # skip_before_action :authenticate_user!, only: :create
 
-  before_action :assign_app, :assign_build, only: [:show]
+  before_action :assign_app, only: [:index, :show]
+  before_action :assign_build, only: [:show]
+
+  def index
+    @builds = @app.builds
+    render
+  end
 
   def show
     send_file @build.apk.file.path
@@ -12,7 +18,7 @@ class BuildsController < ApplicationController
 
   def create
     @build = @app.builds.build(build_params)
-    @build.save ? render(@build, status: 201) : render(json: {errors: @build.errors}, status: 406)
+    @build.save ? render(status: 201) : render(json: {errors: @build.errors}, status: 406)
   end
 
 

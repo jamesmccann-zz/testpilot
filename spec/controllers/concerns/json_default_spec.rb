@@ -30,7 +30,7 @@ describe JSONDefault, type: :controller do
 
   describe "assert_valid_format!" do
     context "good format" do
-      it { expect { get :index }.to_not raise_error(ActionController::UnknownFormat) }
+      it { expect { get :index }.to_not raise_error }
     end
     context "bad format" do
       it { expect { get :index, format: :xml }.to raise_error(ActionController::UnknownFormat) }

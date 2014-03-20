@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
 
     def authenticate!
       authenticate_or_request_with_http_basic do |username, password|
-        ENV.fetch(:HTTP_BASIC_USERNAME, 'test') == username &&\
-        ENV.fetch(:HTTP_BASIC_PASSWORD, 'test123') == password
+        ENV.fetch('HTTP_BASIC_USERNAME', 'test') == username &&\
+        ENV.fetch('HTTP_BASIC_PASSWORD', 'test123') == password
       end
     end
 end

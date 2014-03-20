@@ -104,6 +104,8 @@ GEM
       railties (>= 3.1)
     mime-types (1.25.1)
     minitest (4.7.5)
+    momentjs-rails (2.5.1)
+      railties (>= 3.1)
     multi_json (1.9.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -201,6 +203,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   marionette-rails
+  momentjs-rails
   pg
   rack-offline
   rails (= 4.0.0)

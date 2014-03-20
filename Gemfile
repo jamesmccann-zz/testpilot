@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'devise'
+gem 'dotenv-rails'
 
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-sass'
@@ -22,7 +23,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
   gem 'highline' # To suppress key entry in capistrano
-  gem 'dotenv-rails'
   gem 'debugger'
 end
 

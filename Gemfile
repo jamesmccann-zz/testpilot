@@ -18,6 +18,10 @@ gem 'rails-backbone'
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'highline' # To suppress key entry in capistrano
   gem 'dotenv-rails'
   gem 'debugger'
 end

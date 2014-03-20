@@ -1,3 +1,3 @@
 Testpilot.addInitializer (options) ->
-  @router = new Testpilot.Routers.AppRouter()
+  @router = new Testpilot.Routers.AppsRouter()
   Backbone.history.start()

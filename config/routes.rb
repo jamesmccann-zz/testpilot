@@ -12,7 +12,8 @@ Testpilot::Application.routes.draw do
       cache ActionController::Base.helpers.asset_path("application.js")
       network "/"
     end
-    match "/application.manifest" => offline
+
+    get "/application.manifest" => offline
   end
 
   root 'testpilot#show'

@@ -6,6 +6,15 @@ Testpilot::Application.routes.draw do
     end
   end
 
+  if Rails.env.draft? || Rails.env.production?
+    offline = Rack::Offline.configure :cache_interval => 120 do
+      cache ActionController::Base.helpers.asset_path("application.css")
+      cache ActionController::Base.helpers.asset_path("application.js")
+      network "/"
+    end
+    match "/application.manifest" => offline
+  end
+
   root 'testpilot#show'
 
 end

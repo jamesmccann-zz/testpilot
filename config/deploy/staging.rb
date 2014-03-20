@@ -7,6 +7,7 @@
 role :app, %w{pilot@fly.testpilotapp.com}
 role :web, %w{pilot@fly.testpilotapp.com}
 role :db,  %w{pilot@fly.testpilotapp.com}
+set :rails_env, 'draft'
 
 
 set :ssh_options, {forward_agent: true, port: 2222}

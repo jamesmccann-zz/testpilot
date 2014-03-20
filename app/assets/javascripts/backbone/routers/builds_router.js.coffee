@@ -5,11 +5,10 @@ class Testpilot.Routers.BuildsRouter extends Backbone.Marionette.AppRouter
     ":app_id/builds/.*"    : "index"
 
   index: (app_id) ->
-    @app = new Testpilot.Models.App(id: app_id)
     @builds = new Testpilot.Collections.BuildsCollection(app_id: app_id)
     @builds.fetch
       success: =>
-        @view = new Testpilot.Views.Builds.ListView(model: @app, collection: @builds)
+        @view = new Testpilot.Views.Builds.ListView(collection: @builds)
         $("#testpilot").html(@view.render().el)
 
   show: (app_id, id) ->

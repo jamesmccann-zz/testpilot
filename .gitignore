@@ -27,3 +27,4 @@ config/initializers/secret_token.rb
 
 # Ignore Carrierwave Uploads
 public/uploads
+.env

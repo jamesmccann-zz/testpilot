@@ -24,6 +24,8 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
+  gem 'capybara'
+  gem 'poltergeist'
   gem 'highline' # To suppress key entry in capistrano
   gem 'debugger'
 end

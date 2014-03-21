@@ -2,9 +2,13 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by nullifying the session.
   # For applications, you may want to use :exception instead.
   protect_from_forgery with: :null_session
-  before_action :authenticate!
+  # before_action :authenticate!
 
   private
+
+    def after_sign_out_path_for(resource)
+      new_user_session_path
+    end
 
     def authenticate!
       authenticate_or_request_with_http_basic do |username, password|

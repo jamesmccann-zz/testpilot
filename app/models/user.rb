@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
          :rememberable,
          :trackable,
          :lockable,
-         :validatable
+         :validatable,
+         :confirmable
 end

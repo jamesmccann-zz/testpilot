@@ -1,5 +1,7 @@
 Testpilot::Application.routes.draw do
 
+  devise_for :users
+
   scope :api, constraints: {format: :json} do
     resources :apps, only: [:index, :show] do
       resources :builds, :only => [:index, :show, :create]

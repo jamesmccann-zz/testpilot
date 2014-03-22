@@ -13,8 +13,10 @@ feature 'User confirms account' do
   end
 
   scenario 'invalid token' do
-    visit user_confirmation_path(confirmation_token: 'test')
-    expect(page).to have_content 'Confirmation token is invalid'
+    expect {
+      visit user_confirmation_path(confirmation_token: 'test')
+      user.reload
+    }.to_not change(user, :confirmed?).to be_true
   end
 
   private

@@ -2,6 +2,9 @@
   <h2 class='form-authentication-heading'>
     Sign in to Testpilot
   </h2>
+
+  <%= devise_error_messages! %>
+
   <%= f.email_field :email, autofocus: true, placeholder: 'Email address', required: true, class: 'form-control'%>
 
   <%= f.password_field :password, placeholder: 'Password', required: true, class: 'form-control'%>

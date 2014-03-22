@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe BuildsController do
 
-  # render_views
+  sign_in_user
 
   let(:app) { FactoryGirl.build(:app, :with_single_build) }
   let(:build) { app.builds.first }

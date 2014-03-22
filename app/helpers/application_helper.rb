@@ -27,6 +27,8 @@ module ApplicationHelper
       :success
     when :alert, :warning
       :warning
+    when :danger, :error
+      :danger
     else
       :info
     end

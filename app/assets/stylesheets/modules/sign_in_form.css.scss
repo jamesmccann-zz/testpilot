@@ -1,0 +1,38 @@
+.form-sign-in {
+
+  .form-sign-in-heading, .checkbox, .btn {
+    margin-bottom: 10px;
+  }
+
+  .form-sign-in-heading {
+    text-align: center;
+  }
+
+  .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .checkbox {
+    font-weight: normal;
+  }
+
+  input[type=email] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  input[type=password] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+}

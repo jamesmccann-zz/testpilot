@@ -1,0 +1,10 @@
+<h1>Build #<%= number %></h1>
+<p>
+  Build created at
+  <time itemprop="createdAt" datetime="<%= created_at %>">
+    <%= moment(created_at).fromNow() %>
+  </time>
+</p>
+<h4>Release Notes:</h4>
+<p><%= release_notes %></p>
+<a href="#/index">Back</a>

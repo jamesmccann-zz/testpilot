@@ -18,5 +18,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone.marionette
+//= require moment
 //= require backbone/testpilot
 //= require_self

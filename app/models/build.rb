@@ -10,6 +10,8 @@ class Build < ActiveRecord::Base
   validates :number, presence: true
   validates :apk, presence: true
 
+  default_scope order('number DESC')
+
   private
 
   def set_build_number

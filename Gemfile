@@ -11,11 +11,13 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'dotenv-rails'
+gem 'rack-offline'
 
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-sass'
 gem 'marionette-rails'
 gem 'rails-backbone'
+gem 'momentjs-rails'
 
 group :development, :test do
   gem 'rspec-rails'

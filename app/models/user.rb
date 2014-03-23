@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
          :trackable,
          :lockable,
          :validatable,
-         :confirmable
+         :confirmable,
+         :registerable # Registrations are disabled via routes
 end

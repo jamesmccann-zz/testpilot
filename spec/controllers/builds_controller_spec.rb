@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe BuildsController do
 
-  render_views
-
   let(:app) { FactoryGirl.build(:app, :with_single_build) }
   let(:build) { app.builds.first }
 
@@ -47,7 +45,7 @@ describe BuildsController do
 
     describe "valid attributes" do
       before { Build.any_instance.stub(save: true) }
-      it { subject; response.should render_template "builds/_build" }
+      it { subject; response.should render_template "builds/create" }
       it { subject; response.status.should eq 201 }
     end
 

@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
 gem 'devise'
+gem 'devise_invitable'
 gem 'dotenv-rails'
 gem 'rack-offline'
 

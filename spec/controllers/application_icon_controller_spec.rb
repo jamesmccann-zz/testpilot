@@ -22,6 +22,15 @@ describe ApplicationIconController do
     end
   end
 
+  describe "GET show", "with no icon" do
+    let(:app) { build(:app, id: 1) }
+
+    it "should redirect to the fallback URL" do
+      get :show, app_id: 1
+      expect(response).to redirect_to "http://test.host/assets/fallback/icon_default.png"
+    end
+  end
+
   describe "GET thumb" do
     it "should send the correct file" do
       expect(controller).to receive(:send_file).with(
@@ -30,6 +39,15 @@ describe ApplicationIconController do
       )
 
       get :thumb, app_id: 1
+    end
+  end
+
+  describe "GET thumb", "with no icon" do
+    let(:app) { build(:app, id: 1) }
+
+    it "should redirect to the fallback URL" do
+      get :thumb, app_id: 1
+      expect(response).to redirect_to "http://test.host/assets/fallback/icon_thumb_default.png"
     end
   end
 end

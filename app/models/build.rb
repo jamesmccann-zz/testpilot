@@ -1,4 +1,6 @@
 class Build < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked
 
   belongs_to :app
 

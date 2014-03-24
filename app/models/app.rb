@@ -1,4 +1,6 @@
 class App < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked
 
   cattr_reader :build_token_length
   @@build_token_length = 16

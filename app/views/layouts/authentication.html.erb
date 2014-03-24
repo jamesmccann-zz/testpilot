@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" manifest="/application.manifest">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Testpilot</title>
 
-    <%= render "layouts/partials/device_tags" %>
-    <%= render "layouts/partials/favicons" %>
-
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 </head>
-<body>
-  <%= render "layouts/partials/navigation" %>
+<body class="authentication">
   <div class="container">
-    <%= render "layouts/partials/alerts" %>
-    <%= yield %>
+    <div class="auth-container">
+      <%= render "layouts/partials/alerts" %>
+      <%= yield %>
+    </div>
   </div>
-
 </body>
 </html>

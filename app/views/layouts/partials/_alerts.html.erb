@@ -1,0 +1,4 @@
+<% flash.each do |key, value| %>
+  <% html_class = map_flash_key_to_alert_class(key) %>
+  <%= content_tag :div, content_tag(:p, value), class: "alert alert-#{html_class}" %>
+<% end %>

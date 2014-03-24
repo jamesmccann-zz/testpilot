@@ -1,4 +1,6 @@
 describe JSONDefault, type: :controller do
+  sign_in_user
+
   controller do
     include JSONDefault
 

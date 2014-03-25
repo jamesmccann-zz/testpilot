@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), method: :put, html: {class: 'form-authentication form-change-password', role: 'form'}) do |f| %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <h2 class='form-authentication-heading'>
+    Change your password
+  </h2>
+
+  <%= devise_error_messages! %>
+
+  <%= f.password_field :password, autofocus: true, placeholder: 'New password', autocomplete: 'off', required: true, class: 'form-control'%>
+
+  <%= f.password_field :password_confirmation, autofocus: true, placeholder: 'Confirm new password', autocomplete: 'off', required: true, class: 'form-control'%>
+
+  <%= f.submit 'Change my password', class: 'btn btn-lg btn-primary btn-block' %>
+
+  <%= render "devise/shared/links" %>
+<% end %>
+
+

@@ -1,9 +1,8 @@
 class BuildsController < ApplicationController
   include JSONDefault
 
-  skip_before_action :authenticate!
+  skip_before_action :authenticate_user!, only: :create
   before_action :assign_app_from_token!, only: :create
-  # skip_before_action :authenticate_user!, only: :create
 
   before_action :assign_app, only: [:index, :show]
   before_action :assign_build, only: [:show]

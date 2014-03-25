@@ -37,7 +37,7 @@ class AssignmentsController < ApiController
 
     def find_or_invite_user!
       @user = User.where(email: params[:email]).first ||\
-              User.new(email: params[:email]).invite!
+              User.invite!(email: params[:email])
     end
 
     def find_app

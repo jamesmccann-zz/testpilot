@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
          :lockable,
          :validatable,
          :confirmable
+
+  has_many :assignments
+  has_many :apps, through: :assignments
 end

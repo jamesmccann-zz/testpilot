@@ -17,6 +17,14 @@ describe App do
     expect(App.reflect_on_association(:builds).macro).to eq :has_many
   end
 
+  it "should have assignments" do
+    expect(App.reflect_on_association(:assignments).macro).to eq :has_many
+  end
+
+  it "should have users" do
+    expect(App.reflect_on_association(:users).macro).to eq :has_many
+  end
+
   it "should generate a build token" do
     app.build_token.clear
     expect { app.valid? }.to change(app, :build_token)

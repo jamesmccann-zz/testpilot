@@ -9,5 +9,8 @@ class Testpilot.Views.Builds.ListItem extends Backbone.Marionette.ItemView
     'click button.download-apk': 'downloadApk'
 
   downloadApk: ->
-    window.open(@model.attributes.url)
+    if typeof Android == "undefined"
+      window.open(@model.attributes.url)
+    else
+      Android.downloadApk(@model.attributes.url)
 

@@ -12,8 +12,9 @@ capybara-*.html
 /tmp/*
 /db/*.sqlite3
 /public/system/*
-/private/
+/private
 /coverage/
+/uploads
 /spec/tmp/*
 **.orig
 rerun.txt

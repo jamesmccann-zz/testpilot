@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140322102017) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "build_token", null: false
+    t.string   "icon"
   end
 
   create_table "builds", force: true do |t|

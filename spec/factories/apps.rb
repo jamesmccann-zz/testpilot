@@ -10,5 +10,9 @@ FactoryGirl.define do
         instance.builds = [FactoryGirl.build(:build)]
       end
     end
+
+    trait :with_icon do
+      icon { fixture_file_upload('spec/fixtures/icons/test.png', 'image/png')   }
+    end
   end
 end

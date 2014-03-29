@@ -9,6 +9,9 @@ Testpilot::Application.routes.draw do
   scope :api, constraints: {format: :json} do
     resources :apps, only: [:index, :show] do
       resources :builds, :only => [:index, :show, :create]
+      resource  :icon, only: [:show], controller: :application_icon do
+        get :thumb
+      end
     end
   end
 

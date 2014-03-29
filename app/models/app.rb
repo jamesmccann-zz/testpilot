@@ -9,6 +9,8 @@ class App < ActiveRecord::Base
   validates :build_token, presence: true, uniqueness: true
   before_validation :assign_build_token, on: :create
 
+  mount_uploader :icon, ApplicationIconUploader
+
   def latest_build
     builds.last
   end

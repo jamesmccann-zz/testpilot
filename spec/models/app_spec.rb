@@ -30,6 +30,10 @@ describe App do
     expect { app.valid? }.to change(app, :build_token)
   end
 
+  it "should have an icon" do
+    expect(app.icon).to be_a ApplicationIconUploader
+  end
+
   describe ".to_param" do
     it "should parameterize the app name and ID" do
       app.id = 1

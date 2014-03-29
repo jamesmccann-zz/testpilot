@@ -10,6 +10,9 @@ Testpilot::Application.routes.draw do
     resources :apps, only: [:index, :show] do
       resources :builds, :only => [:index, :show, :create]
       resources :assignments
+      resource  :icon, only: [:show], controller: :application_icon do
+        get :thumb
+      end
     end
   end
 

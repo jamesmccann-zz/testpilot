@@ -1,8 +1,17 @@
 <div class="jumbotron mtxl">
-  <h1><%= name %></h1>
-  <p>
-    App created at <time itemprop="createdAt" datetime="<%= created_at %>"><%= created_at %></time>
-  </p>
+  <div class="media">
+    <a class="pull-left mrl" href="#">
+      <img width="128" height="128" src="<%= icon.default %>" alt="<%= name %>'s Icon" />
+    </a>
+    <div class="media-body">
+        <h1 class="media-heading"><%= name %></h1>
+        <p>
+          App created at <time itemprop="createdAt" datetime="<%= created_at %>"><%= created_at %></time>
+        </p>
+    </div>
+  </div>
 </div>
 
-<ul></ul>
+<ul>
+  <i class="fa fa-spinner fa-spin loading-indicator"></i>
+</ul>

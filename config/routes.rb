@@ -7,7 +7,7 @@ Testpilot::Application.routes.draw do
   end
 
   scope :api, constraints: {format: :json} do
-    resources :apps, only: [:index, :show] do
+    resources :apps, only: [:index, :show, :create] do
       resources :builds, :only => [:index, :show, :create]
       resources :assignments
       resource  :icon, only: [:show], controller: :application_icon do

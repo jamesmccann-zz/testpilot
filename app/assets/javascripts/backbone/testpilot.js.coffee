@@ -1,6 +1,7 @@
 #= require_self
 #= require_tree ./templates
 #= require_tree ./models
+#= require_tree ./regions
 #= require_tree ./views
 #= require_tree ./routers
 #= require_tree ./initializers
@@ -14,3 +15,4 @@ Backbone.Marionette.Renderer.render = (template, data) ->
 @Testpilot.Collections = {}
 @Testpilot.Routers = {}
 @Testpilot.Views = {}
+@Testpilot.Regions = {}

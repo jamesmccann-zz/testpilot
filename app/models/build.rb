@@ -1,4 +1,5 @@
 class Build < ActiveRecord::Base
+  include PublicActivity::Common
 
   belongs_to :app
 

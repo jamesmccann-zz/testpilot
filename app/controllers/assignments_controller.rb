@@ -41,8 +41,7 @@ class AssignmentsController < ApiController
 
     def find_or_invite_user!
       return unless assignment_params[:email]
-      @user = User.where(email: assignment_params[:email]).first ||\
-              User.invite!(email: assignment_params[:email])
+      @user = User.find_or_invite(assignment_params[:email])
     end
 
     def find_app

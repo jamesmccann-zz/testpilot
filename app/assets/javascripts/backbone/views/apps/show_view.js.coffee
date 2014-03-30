@@ -10,5 +10,5 @@ class Testpilot.Views.Apps.ShowView extends Backbone.Marionette.CompositeView
     builds.fetch
       success: =>
         @collection = builds
-        $("#testpilot").html(this.render().el)
+        Testpilot.main.show(this)
         $('.loading-indicator').remove()

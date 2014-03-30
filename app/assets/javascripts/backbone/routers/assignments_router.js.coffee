@@ -8,5 +8,5 @@ class Testpilot.Routers.AssignmentsRouter extends Backbone.Marionette.AppRouter
     @assignment.fetch
       success: =>
         @view = new Testpilot.Views.Assignments.ListView(collection: @assignment)
-        $("#testpilot").html(@view.render().el)
+        Testpilot.modal.show(@view)
 

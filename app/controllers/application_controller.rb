@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include PublicActivity::StoreController
+
   # Prevent CSRF attacks by nullifying the session.
   # For applications, you may want to use :exception instead.
   protect_from_forgery with: :null_session

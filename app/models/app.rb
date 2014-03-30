@@ -1,4 +1,5 @@
 class App < ActiveRecord::Base
+  include PublicActivity::Common
 
   cattr_reader :build_token_length
   @@build_token_length = 16
@@ -10,6 +11,8 @@ class App < ActiveRecord::Base
   validates :name, presence: true
   validates :build_token, presence: true, uniqueness: true
   before_validation :assign_build_token, on: :create
+
+  mount_uploader :icon, ApplicationIconUploader
 
   def latest_build
     builds.last

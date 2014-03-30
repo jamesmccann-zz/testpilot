@@ -14,7 +14,7 @@ class AssignmentsController < ApiController
   def create
     @assignment = @app.assignments.build(user: @user)
 
-    if @assignment.save!
+    if @assignment.save
       render status: :created
     else
       render json: @assignment.errors, status: :not_acceptable

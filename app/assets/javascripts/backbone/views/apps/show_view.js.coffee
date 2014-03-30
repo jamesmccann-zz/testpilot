@@ -5,14 +5,16 @@ class Testpilot.Views.Apps.ShowView extends Backbone.Marionette.CompositeView
   getItemView: -> Testpilot.Views.Builds.ListItem,
   itemViewContainer: 'ul'
   events:
-    'click .js-manage-assignments': 'showAssignmentsDialog'
-  showAssignmentsDialog: ->
+    'click .js-manage-assignments': 'showAssignments'
+
+  showAssignments: ->
     @assignments = new Testpilot.Collections.AssignmentsCollection(app_id: @model.id)
     @assignments.fetch
       success: =>
         Testpilot.modal.show(
           new Testpilot.Views.Assignments.ListView(collection: @assignments)
         )
+
   initialize: ->
     builds = new Testpilot.Collections.BuildsCollection(app_id: @model.id)
     builds.fetch

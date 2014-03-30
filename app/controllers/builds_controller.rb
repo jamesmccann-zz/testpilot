@@ -18,7 +18,12 @@ class BuildsController < ApplicationController
 
   def create
     @build = @app.builds.build(build_params)
-    @build.save ? render(status: 201) : render(json: {errors: @build.errors}, status: 406)
+    if @build.save 
+      @build.create_activity :create
+      render status: 201
+    else
+      render json: { errors: @build.errors }, status: 406
+    end
   end
 
 

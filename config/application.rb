@@ -23,5 +23,11 @@ module Testpilot
 
     # Don't initialize app on precompile
     config.assets.initialize_on_precompile = false
+
+    # Set global email layout
+    config.to_prepare do
+        Devise::Mailer.layout "email"
+        ActionMailer::Base.layout "email"
+    end
   end
 end

@@ -8,4 +8,20 @@ class Testpilot.Views.Assignments.ListView extends Backbone.Marionette.Composite
   getItemView: -> Testpilot.Views.Assignments.ListItem
   itemViewOptions: ->
     {collection: this.collection}
+  addAssignment: (evt) ->
+    evt.preventDefault()
+    form = $(evt.target)
+    this.collection.create(
+      form.serializeJSON().assignment,
+      wait: true,
+      success: =>
+        form.get(0).reset()
+      error: =>
+        $('.form-group', form).addClass('has-error')
+    )
+
+
+
+  events:
+    'submit form#new_assignment': 'addAssignment'
 

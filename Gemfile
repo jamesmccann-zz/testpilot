@@ -8,7 +8,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'devise'
+gem 'devise_invitable'
 gem 'dotenv-rails'
 gem 'rack-offline'
 gem 'public_activity'
@@ -25,6 +27,8 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
+  gem 'capybara'
+  gem 'poltergeist'
   gem 'highline' # To suppress key entry in capistrano
   gem 'debugger'
 end

@@ -2,6 +2,8 @@ require "spec_helper"
 
 describe AppsController do
 
+  sign_in_user
+
   describe "GET index" do
     before do
       App.stub(all: [App.new])

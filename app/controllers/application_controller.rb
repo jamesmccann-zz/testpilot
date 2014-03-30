@@ -19,9 +19,8 @@ class ApplicationController < ActionController::Base
     end
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:accept_invitation) do |u|
-        u.permit(:full_name, :password, :password_confirmation, :invitation_token)
-      end
+      devise_parameter_sanitizer.for(:accept_invitation) << :full_name
+      devise_parameter_sanitizer.for(:account_update) << :full_name
     end
 
 end

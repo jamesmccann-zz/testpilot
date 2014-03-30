@@ -14,7 +14,7 @@ class AssignmentsController < ApiController
   def create
     @assignment = @app.assignments.build(user: @user)
 
-    if @assignment.save!
+    if @assignment.save
       render status: :created
     else
       render json: @assignment.errors, status: :not_acceptable
@@ -29,6 +29,10 @@ class AssignmentsController < ApiController
 
   private
 
+    def assignment_params
+      params.require(:assignment).permit(:email)
+    end
+
     def find_assignment
       # Ensure that we have an app
       find_app
@@ -36,8 +40,9 @@ class AssignmentsController < ApiController
     end
 
     def find_or_invite_user!
-      @user = User.where(email: params[:email]).first ||\
-              User.invite!(email: params[:email])
+      return unless assignment_params[:email]
+      @user = User.where(email: assignment_params[:email]).first ||\
+              User.invite!(email: assignment_params[:email])
     end
 
     def find_app

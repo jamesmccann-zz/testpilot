@@ -3,3 +3,15 @@
 @import 'modules/panel';
 @import 'modules/sign_in_form';
 @import 'modules/change_password_form';
+
+/* Override z-index of modal-content to
+   ensure that it displays over the top of
+   the backdrop.
+*/
+.modal-content {
+  z-index: 1050;
+}
+
+.modal-footer.modal-footer-left {
+  text-align: left;
+}

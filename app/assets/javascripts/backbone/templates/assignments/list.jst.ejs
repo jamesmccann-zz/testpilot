@@ -1,0 +1,25 @@
+<div class="modal-content">
+  <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h2 class="modal-title">Manage Access</h2>
+  </div>
+
+  <div class="modal-body">
+    <div id="assignments-list"></div>
+  </div>
+
+  <div class="modal-footer modal-footer-left">
+    <form id="new_assignment" class="form-inline">
+      <h4>Allow access to this application:</h4>
+      <p>
+        Enter an email address below to allow access this application. If they
+        are not already a Testpilot user, they will be invited to sign up.
+      <div class="form-group">
+        <label for="assignment[email]" class="sr-only">Email address</label>
+        <input type="email" required="required" id="assignment_email" name="assignment[email]" placeholder="Email address" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-default">Add or Invite</button>
+    </form>
+</div>
+
+

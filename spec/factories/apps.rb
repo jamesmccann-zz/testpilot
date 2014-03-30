@@ -7,7 +7,13 @@ FactoryGirl.define do
 
     trait :with_single_build do
       after(:build) do |instance|
-        instance.builds = [FactoryGirl.build(:build)]
+        instance.builds = FactoryGirl.build_list(:build, 1)
+      end
+    end
+
+    trait :with_assignments do
+      after(:build) do |instance|
+        instance.assignments = FactoryGirl.build_list(:assignment, 1)
       end
     end
 

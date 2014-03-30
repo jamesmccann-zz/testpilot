@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324035813) do
+ActiveRecord::Schema.define(version: 20140325054731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(version: 20140324035813) do
     t.string   "build_token", null: false
     t.string   "icon"
   end
+
+  create_table "assignments", force: true do |t|
+    t.integer  "app_id"
+    t.integer  "user_id"
+    t.string   "role",       default: "tester", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assignments", ["app_id", "user_id"], name: "index_assignments_on_app_id_and_user_id", unique: true, using: :btree
+  add_index "assignments", ["app_id"], name: "index_assignments_on_app_id", using: :btree
+  add_index "assignments", ["user_id"], name: "index_assignments_on_user_id", using: :btree
 
   create_table "builds", force: true do |t|
     t.integer  "number"

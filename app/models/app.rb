@@ -5,6 +5,8 @@ class App < ActiveRecord::Base
   @@build_token_length = 16
 
   has_many :builds
+  has_many :assignments
+  has_many :users, through: :assignments
 
   validates :name, presence: true
   validates :build_token, presence: true, uniqueness: true

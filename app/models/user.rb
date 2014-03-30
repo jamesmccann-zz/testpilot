@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :invitable, :database_authenticatable,
+  devise :invitable,
+         :database_authenticatable,
          :recoverable,
          :rememberable,
          :trackable,
@@ -9,4 +10,7 @@ class User < ActiveRecord::Base
          :validatable,
          :confirmable,
          :registerable # Registrations are disabled via routes
+
+  has_many :assignments
+  has_many :apps, through: :assignments
 end

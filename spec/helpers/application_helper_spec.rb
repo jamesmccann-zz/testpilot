@@ -21,4 +21,10 @@ describe ApplicationHelper do
     end
   end
 
+  describe "#form_help" do
+    subject { helper.form_help("Test content") }
+    it { subject.should include "class=\"help-block\"" }
+    it { subject.should include "Test content" }
+  end
+
 end

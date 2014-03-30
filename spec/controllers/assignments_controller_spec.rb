@@ -22,7 +22,7 @@ describe AssignmentsController do
     context "User already exists" do
       it "adds the assignment to the existing user" do
         expect {
-          post :create, app_id: 1, email: user.email
+          post :create, app_id: 1, assignment: {email: user.email}
           user.reload
         }.to change(user.assignments, :count).by(1)
       end
@@ -33,18 +33,18 @@ describe AssignmentsController do
 
       it "adds the assignment to the invited user" do
         expect {
-          post :create, app_id: 1, email: uninvited_user[:email]
+          post :create, app_id: 1, assignment: {email: uninvited_user[:email]}
         }.to change(User, :count).by(1)
       end
     end
 
     it "renders the created assignment" do
-      post :create, app_id: 1, email: user.email
+      post :create, app_id: 1, assignment: {email: user.email}
       response.should render_template :create
     end
 
     it "responds with the correct status" do
-      post :create, app_id: 1, email: user.email
+      post :create, app_id: 1, assignment: {email: user.email}
       response.status.should eq 201
     end
   end

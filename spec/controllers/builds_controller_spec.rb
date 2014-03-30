@@ -4,7 +4,7 @@ describe BuildsController do
 
   sign_in_user
 
-  let(:app) { FactoryGirl.build(:app, :with_single_build) }
+  let(:app) { FactoryGirl.create(:app, :with_single_build) }
   let(:build) { app.builds.first }
 
   describe "GET index" do

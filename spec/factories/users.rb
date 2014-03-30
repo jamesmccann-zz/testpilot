@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
+    sequence(:full_name) { |n| "Test #{n} User #{n}" }
     sequence(:email) { |n| "user-#{n}@testpilotapp.com" }
     password { "testtest123" }
     confirmed_at { DateTime.now }

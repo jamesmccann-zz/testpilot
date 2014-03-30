@@ -33,4 +33,15 @@ module ApplicationHelper
       :info
     end
   end
+
+  # Public: Construct a help block element for display
+  # in Bootstrap forms.
+  #
+  # content - The content of the help block
+  #
+  # Returns HTML-safe string
+  def form_help(content)
+    content_tag(:p, content, class: 'help-block')
+  end
 end
+

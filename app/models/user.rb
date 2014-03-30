@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
          :confirmable,
          :registerable # Registrations are disabled via routes
 
+  validates :full_name, presence: true
+
   has_many :assignments
   has_many :apps, through: :assignments
 end

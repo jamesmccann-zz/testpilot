@@ -5,7 +5,7 @@
       <table class="twelve columns">
         <tr>
           <td>
-            <h1>Hello <%= @resource.email %>,</h1>
+            <h1>Hello <%= @resource.full_name %>,</h1>
             <p class="lead">
               <%= @resource.invited_by ? @resource.invited_by.email : "Somebody" %> has invited
               you to have access to an application on Testpilot.

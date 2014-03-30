@@ -5,8 +5,8 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :full_name, 'Email address' %>
-    <%= f.email_field :full_name, autofocus: true, placeholder: 'Full name', required: true, class: 'form-control'%>
+    <%= f.label :full_name, 'Full name' %>
+    <%= f.text_field :full_name, autofocus: true, placeholder: 'Full name', required: true, class: 'form-control'%>
     <%= form_help 'Your full name, e.g. John Doe' %>
   </div>
 

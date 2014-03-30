@@ -1,7 +1,6 @@
 class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
   routes:
     "index"      : "index"
-    "apps/new"   : "new"
     ":id"        : "show"
     ".*"         : "index"
 
@@ -18,8 +17,5 @@ class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
       success: =>
         @view = new Testpilot.Views.Apps.ShowView(model: app)
         Testpilot.main.show(@view)
-
-  new: ->
-    app = new Testpilot.Models.App
 
 

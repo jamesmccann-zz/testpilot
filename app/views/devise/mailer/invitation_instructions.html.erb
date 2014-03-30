@@ -1,8 +1,72 @@
-<p>Hello <%= @resource.email %>!</p>
+<table class="row">
+  <tr>
+    <td class="wrapper last">
 
-<p>Someone has invited you to <%= root_url %>, you can accept it through the link below.</p>
+      <table class="twelve columns">
+        <tr>
+          <td>
+            <h1>Hello <%= @resource.email %>,</h1>
+            <p class="lead">
+              <%= @resource.invited_by ? @resource.invited_by.email : "Somebody" %> has invited
+              you to have access to an application on TestPilot.
+            </p>
+            <p>
+              This will allow you to view and install the application, and place feedback.
+              To confirm your account, please click on the link below:
+            </p>
 
-<p><%= link_to 'Accept invitation', accept_invitation_url(@resource, :invitation_token => @token) %></p>
+            <p>
+              <h4 style="text-align:center;"><%= link_to 'Accept invitation', accept_invitation_url(@resource, :invitation_token => @token) %></h4>
+            </p>
 
-<p>If you don't want to accept the invitation, please ignore this email.<br />
-Your account won't be created until you access the link above and set your password.</p>
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+<table class="row callout">
+  <tr>
+    <td class="wrapper last">
+
+      <table class="twelve columns">
+        <tr>
+          <td class="panel">
+            <ul>
+              <li>Your account won't be created until you access the link above and set your password.</li>
+              <li>If you don't want to accept the invitation, please ignore this email.</li>
+              <li>If you continue to receive invitations that you do not want, please get in
+                  touch with us at <a href="mailto:support@testpilotapp.com">support@testpilotapp.com</a>.</li>
+            </ul>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+
+<table class="row">
+  <tr>
+    <td class="wrapper last">
+
+      <table class="twelve columns">
+        <tr>
+          <td align="center">
+            <center>
+              <p style="text-align:center;"><a href="https://fly.testpilotapp.com">TestPilot</a> | <a href="https://testpilotapp.com/terms-of-use">Terms</a> | <a href="https://testpilotapp.com/privacy">Privacy</a></p>
+            </center>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>

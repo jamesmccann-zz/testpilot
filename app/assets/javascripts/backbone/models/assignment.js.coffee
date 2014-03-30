@@ -1,5 +1,4 @@
 class Testpilot.Models.Assignment extends Backbone.Model
-  url: -> "api/apps/#{@app_id}/assignments/#{@id}"
   paramRoot: 'assignment'
   defaults: {}
 

@@ -1,5 +1,5 @@
 class Build < ActiveRecord::Base
-  include Tracked
+  include PublicActivity::Common
 
   belongs_to :app
 

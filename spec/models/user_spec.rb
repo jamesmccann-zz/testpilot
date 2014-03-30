@@ -7,6 +7,11 @@ describe User do
     expect(subject).to be_valid
   end
 
+  it "should not be valid without a name" do
+    subject.full_name.clear
+    expect(subject).to_not be_valid
+  end
+
   it "should have assignments" do
     expect(User.reflect_on_association(:assignments).macro).to eq :has_many
   end

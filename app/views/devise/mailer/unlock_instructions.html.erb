@@ -1,7 +1,64 @@
-<p>Hello <%= @resource.email %>!</p>
+<table class="row">
+  <tr>
+    <td class="wrapper last">
 
-<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+      <table class="twelve columns">
+        <tr>
+          <td>
+            <h1>Hello <%= @resource.email %>!</h1>
+            <p class="lead">
+              Your account has been locked due to an excessive number of unsuccessful sign in attempts. Please click the link below to unlock your account:
+            </p>
 
-<p>Click the link below to unlock your account:</p>
+            <p>
+              <h4 style="text-align:center;"><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></h4>
+            </p>
 
-<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+<table class="row callout">
+  <tr>
+    <td class="wrapper last">
+
+      <table class="twelve columns">
+        <tr>
+          <td class="panel">
+            <p>
+              Please report any suspicious activity to us, at <a href="mailto:support@testpilotapp.com">support@testpilotapp.com</a>.
+            </p>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+
+<table class="row">
+  <tr>
+    <td class="wrapper last">
+
+      <table class="twelve columns">
+        <tr>
+          <td align="center">
+            <center>
+              <p style="text-align:center;"><a href="https://fly.testpilotapp.com">TestPilot</a> | <a href="https://testpilotapp.com/terms-of-use">Terms</a> | <a href="https://testpilotapp.com/privacy">Privacy</a></p>
+            </center>
+          </td>
+          <td class="expander"></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>

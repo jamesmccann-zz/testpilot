@@ -1,0 +1,5 @@
+test:
+  delivery_method: test
+development:
+  delivery_method: :smtp
+  host: "localhost:1025"

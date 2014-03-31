@@ -1,5 +1,14 @@
 <%= content_tag :div, '', id: 'modal', class: 'modal', tabindex: -1, role: "dialog", :"aria-labelledby" => "Modal", :"aria-hidden" => true %>
 <%= content_tag :div, '', id: 'testpilot' %>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <a href="/downloads/testpilot.apk">
+      <button type="button" class="btn btn-success btn-lg btn-block">Get Testpilot for Android</button>
+    </a>
+  </div>
+</div>
+
 <script type="text/javascript" charset="utf-8">
   $(function () {
     Testpilot.start();

@@ -46,7 +46,7 @@ describe BuildsController do
     end
 
     describe "valid attributes" do
-      before { Build.any_instance.stub(save: true) }
+      before { Build.any_instance.stub(save: true, create_activity: true) }
       it { subject; response.should render_template :create }
       it { subject; response.status.should eq 201 }
     end

@@ -10,7 +10,6 @@ class Assignment < ActiveRecord::Base
             :role,
             presence: true
 
-  validates [:app_id, :user_id],
-            uniqueness: true
+  validates :app_id, uniqueness: {scope: :user_id}
 
 end

@@ -1,0 +1,6 @@
+test:
+  :delivery_method: :test
+  :url_host: 'localhost:3000'
+development:
+  :delivery_method: :smtp
+  :host: "localhost:1025"

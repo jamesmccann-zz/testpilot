@@ -3,7 +3,7 @@ Testpilot.Views.Apps ||= {}
 class Testpilot.Views.Apps.ShowView extends Backbone.Marionette.CompositeView
   template: 'apps/show'
   getItemView: -> Testpilot.Views.Builds.ListItem,
-  itemViewContainer: 'ul'
+  itemViewContainer: '#builds-list'
   events:
     'click .js-manage-assignments': 'showAssignmentsDialog'
   showAssignmentsDialog: ->

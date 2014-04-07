@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe JSONDefault, type: :controller do
   sign_in_user
 

@@ -17,8 +17,8 @@ describe Assignment do
     expect(subject).to_not be_valid
   end
 
-  it "should be invalid without a role" do
-    subject.role = nil
+  it "should be invalid without the developer flag" do
+    subject.developer = nil
     expect(subject).to_not be_valid
   end
 

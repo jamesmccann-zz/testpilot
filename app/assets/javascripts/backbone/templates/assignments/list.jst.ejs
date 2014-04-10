@@ -19,10 +19,10 @@
         <input type="email" required="required" id="assignment_email" name="assignment[email]" placeholder="Email address" class="form-control">
       </div>
 
-      <% if (role == "tester") { %>
+      <% if (developer) { %>
       <div class="form-group mlm mrm">
         <label>
-          <input type="checkbox" id="assignment_is_developer" name="assignment_is_developer">
+          <input type="checkbox" id="assignment_developer" name="assignment_developer">
           Developer?
         </label>
       </div>

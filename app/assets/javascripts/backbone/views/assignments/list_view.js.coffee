@@ -20,6 +20,12 @@ class Testpilot.Views.Assignments.ListView extends Backbone.Marionette.Composite
         $('.form-group', form).addClass('has-error')
     )
 
+  constructor: ->
+    super
+    @model = @collection.models.filter((assignment) ->
+      assignment.attributes.user.id == Testpilot.currentUser.get('id')
+    )[0]
+
 
 
   events:

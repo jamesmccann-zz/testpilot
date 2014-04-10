@@ -21,6 +21,7 @@ RSpec.configure do |config|
   # Factory framework
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, type: :controller
+  config.include ControllerHelpers, type: :controller
 
 
   # ## Mock Framework

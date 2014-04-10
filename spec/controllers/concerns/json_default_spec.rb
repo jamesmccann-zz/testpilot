@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe JSONDefault, type: :controller do
-  sign_in_user
 
   controller do
     include JSONDefault
@@ -9,6 +8,10 @@ describe JSONDefault, type: :controller do
     def index
       render nothing: true
     end
+  end
+
+  before do
+    sign_in
   end
 
   describe "ensure_default_format" do

@@ -12,7 +12,9 @@ class AssignmentsController < ApiController
   end
 
   def create
-    @assignment = @app.assignments.build(user: @user)
+    @assignment = @app.assignments.build(
+      assignment_params.except(:email).merge(user: @user)
+    )
 
     if @assignment.save
       render status: :created
@@ -30,7 +32,7 @@ class AssignmentsController < ApiController
   private
 
     def assignment_params
-      params.require(:assignment).permit(:email)
+      params.require(:assignment).permit(:email, :developer)
     end
 
     def find_assignment

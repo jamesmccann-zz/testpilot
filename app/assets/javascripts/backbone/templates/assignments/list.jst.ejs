@@ -22,7 +22,8 @@
       <% if (developer) { %>
       <div class="form-group mlm mrm">
         <label>
-          <input type="checkbox" id="assignment_developer" name="assignment_developer">
+          <input type="hidden" name="assignment[developer]" value="false" />
+          <input type="checkbox" name="assignment[developer]" value="true" />
           Developer?
         </label>
       </div>

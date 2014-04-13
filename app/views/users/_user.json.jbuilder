@@ -1,3 +1,3 @@
 json.cache! user do
-  json.extract!(user, :id, :email, :full_name, :created_at)
+  json.extract!(user, :id, :full_name, :email, :created_at)
 end

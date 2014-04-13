@@ -2,11 +2,10 @@ Testpilot.Views.Apps ||= {}
 
 class Testpilot.Views.Apps.Form extends Backbone.Marionette.ItemView
   template: 'apps/form'
-  className: 'modal-dialog'
 
-  events:
-    'submit form#new-app': 'create'
-    'click .js-cancel': 'close'
+  triggers:
+    'submit': 'form:submit'
+    "click [data-form-button='cancel']": 'form:cancel'
 
   ui:
     name: "input[name='app[name]']"
@@ -16,12 +15,4 @@ class Testpilot.Views.Apps.Form extends Backbone.Marionette.ItemView
       name: @ui.name.val()
 
     @model.set(data)
-
-  create: (evt) ->
-    evt.preventDefault()
-    @update()
-    @model.save {},
-      success: =>
-        @trigger 'save', @model
-        @close()
 

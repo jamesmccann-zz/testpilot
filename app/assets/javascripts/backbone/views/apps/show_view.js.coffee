@@ -4,21 +4,6 @@ class Testpilot.Views.Apps.ShowView extends Backbone.Marionette.CompositeView
   template: 'apps/show'
   getItemView: -> Testpilot.Views.Builds.ListItem,
   itemViewContainer: '#builds-list'
-  events:
-    'click .js-manage-assignments': 'showAssignments'
+  triggers:
+    'click .js-manage-assignments': 'show:assignments:clicked'
 
-  showAssignments: ->
-    @assignments = new Testpilot.Collections.AssignmentsCollection(app_id: @model.id)
-    @assignments.fetch
-      success: =>
-        Testpilot.modal.show(
-          new Testpilot.Views.Assignments.ListView(collection: @assignments)
-        )
-
-  initialize: ->
-    builds = new Testpilot.Collections.BuildsCollection(app_id: @model.id)
-    builds.fetch
-      success: =>
-        @collection = builds
-        Testpilot.main.show(this)
-        $('.loading-indicator').remove()

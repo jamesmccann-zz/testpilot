@@ -1,4 +1,5 @@
 class AppsController < ApiController
+  include JSONDefault
 
   def index
     @apps = current_user.apps

@@ -26,7 +26,6 @@ class BuildsController < ApplicationController
     end
   end
 
-
   private
 
     def build_params

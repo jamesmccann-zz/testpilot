@@ -2,15 +2,16 @@ require 'spec_helper'
 
 describe ApplicationIconController do
 
-  sign_in_user 
-
   let(:app) { build(:app, :with_icon, id: 1) }
+  let(:user) { build(:user) }
+
   before do
     # Stub render, otherwise Rails always tries to render
     controller.stub(render: nil)
+    sign_in user
 
     app.icon.store!
-    App.stub(find: app)
+    user.stub_chain(:apps, find: app)
   end
 
   describe "GET show" do

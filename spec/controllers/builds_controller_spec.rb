@@ -2,15 +2,17 @@ require 'spec_helper'
 
 describe BuildsController do
 
-  sign_in_user
-
   let(:app) { FactoryGirl.build(:app, :with_single_build) }
+  let(:user) { FactoryGirl.build(:user) }
   let(:build) { app.builds.first }
+
+  before do
+    sign_in user
+    user.stub_chain(:apps, find: app)
+  end
 
   describe "GET index" do
     before do
-      App.stub(find: app)
-      app.builds.stub(all: [build])
       get :index, app_id: 1
     end
 
@@ -20,7 +22,6 @@ describe BuildsController do
 
   describe "GET show" do
     before do
-      App.stub(find: app)
       app.builds.stub(find: build)
 
       # Stubbing render in order to establish

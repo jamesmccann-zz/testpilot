@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe UsersController do
-  sign_in_user
 
   describe "GET show" do
     before do
+      sign_in
       get :show
     end
 

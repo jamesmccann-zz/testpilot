@@ -2,11 +2,15 @@ require "spec_helper"
 
 describe AppsController do
 
-  sign_in_user
+  let(:user) { build_stubbed(:user) }
+
+  before do
+    sign_in user
+  end
 
   describe "GET index" do
     before do
-      App.stub(all: [App.new])
+      user.stub(apps: [App.new])
       get :index
     end
 
@@ -17,7 +21,7 @@ describe AppsController do
 
   describe "GET show" do
     before do
-      App.stub(find: App.new)
+      user.stub_chain(:apps, find: App.new)
       get :show, {id: 1}
     end
 

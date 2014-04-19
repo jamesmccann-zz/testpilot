@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe AssignmentsController do
-  sign_in_user
-
   let(:app) { build(:app, :with_assignments) }
+  let(:user) { build(:user) }
   let(:assignment) { app.assignments.first }
 
-  before { App.stub(find: app) }
+  before do
+    sign_in user
+    user.stub_chain(:apps, find: app)
+  end
 
   describe "GET index" do
     before { get :index, app_id: 1 }
@@ -17,14 +19,14 @@ describe AssignmentsController do
 
   describe "POST create" do
     let(:app) { create(:app) }
-    let(:user) { create(:user) }
+    let(:new_user) { create(:user) }
 
     context "User already exists" do
       it "adds the assignment to the existing user" do
         expect {
-          post :create, app_id: 1, assignment: {email: user.email}
-          user.reload
-        }.to change(user.assignments, :count).by(1)
+          post :create, app_id: 1, assignment: {email: new_user.email}
+          new_user.reload
+        }.to change(new_user.assignments, :count).by(1)
       end
     end
 

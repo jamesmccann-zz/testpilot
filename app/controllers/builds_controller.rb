@@ -18,7 +18,7 @@ class BuildsController < ApplicationController
 
   def create
     @build = @app.builds.build(build_params)
-    if @build.save 
+    if @build.save
       @build.create_activity :create
       render status: 201
     else
@@ -34,7 +34,7 @@ class BuildsController < ApplicationController
     end
 
     def assign_app
-      @app = App.find(params[:app_id])
+      @app = current_user.apps.find(params[:app_id])
     end
 
     def assign_build

@@ -11,6 +11,7 @@ class AppsController < ApiController
 
   def create
     @app = App.new(app_params)
+    @app.assignments.build(user: current_user)
     if @app.save
       @app.create_activity :create
       render status: 201

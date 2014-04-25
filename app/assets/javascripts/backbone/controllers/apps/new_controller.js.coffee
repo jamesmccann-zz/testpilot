@@ -13,9 +13,10 @@ class Testpilot.Controllers.Apps.NewController extends Backbone.Marionette.Contr
   createApp: ->
     @view.update()
     @app.save {},
-      success: =>
+      success: (app, response) =>
         @trigger 'save', @app
         @close()
+
 
   close: ->
     new Testpilot.Controllers.Apps.ListController

@@ -14,7 +14,7 @@ class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
   new: ->
     new Testpilot.Controllers.Apps.NewController
 
-  Testpilot.vent.on 'new:app', ->
+  Testpilot.vent.on 'apps:new', ->
     new Testpilot.Controllers.Apps.NewController
 
 

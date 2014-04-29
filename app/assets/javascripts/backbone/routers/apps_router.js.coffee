@@ -3,7 +3,6 @@ class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
     "index"      : "index"
     ":id"        : "show"
     "apps/new"   : "new"
-    ".*"         : "index"
 
   index: ->
     new Testpilot.Controllers.Apps.ListController

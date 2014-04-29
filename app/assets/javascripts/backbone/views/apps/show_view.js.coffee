@@ -5,5 +5,5 @@ class Testpilot.Views.Apps.ShowView extends Backbone.Marionette.CompositeView
   getItemView: -> Testpilot.Views.Builds.ListItem,
   itemViewContainer: '#builds-list'
   triggers:
-    'click .js-manage-assignments': 'show:assignments:clicked'
+    'click .js-manage-assignments': 'assignments:show'
 

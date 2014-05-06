@@ -1,5 +1,5 @@
 json.cache! assignment do
   json.id assignment.id
-  json.role assignment.role
+  json.developer assignment.developer
   json.user { json.partial! assignment.user }
 end

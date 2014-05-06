@@ -1,11 +1,11 @@
 class AppsController < ApiController
 
   def index
-    @apps = App.all
+    @apps = current_user.apps
   end
 
   def show
-    @app = App.find(params[:id])
+    @app = current_user.apps.find(params[:id])
   end
 
   private

@@ -6,6 +6,7 @@
 #= require_tree ./controllers
 #= require_tree ./routers
 #= require_tree ./initializers
+#= require_tree ./helpers
 
 @Testpilot = new Marionette.Application()
 

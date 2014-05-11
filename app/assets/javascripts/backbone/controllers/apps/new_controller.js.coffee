@@ -15,11 +15,12 @@ class Testpilot.Controllers.Apps.NewController extends Backbone.Marionette.Contr
     @app.save {},
       success: (app, response) =>
         @trigger 'save', @app
+        Testpilot.vent.trigger 'alert', 'success', "#{@app.attributes.name} was created"
         @close()
-
+      error: (app, response) =>
+        Testpilot.vent.trigger 'alert', 'info', 'Oops, something went wrong. Please try again'
+        @close()
 
   close: ->
     new Testpilot.Controllers.Apps.ListController
-
-
 

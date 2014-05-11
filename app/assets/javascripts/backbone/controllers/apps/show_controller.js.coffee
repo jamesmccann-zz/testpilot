@@ -10,7 +10,7 @@ class Testpilot.Controllers.Apps.ShowController extends Backbone.Marionette.Cont
         @view.model = @app
         Testpilot.main.show(@view)
 
-    @listenTo @view, 'show:assignments:clicked', (child, args) ->
+    @listenTo @view, 'assignments:show', ->
       @showAssignments()
 
     #TODO: move to a subview

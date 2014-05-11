@@ -5,5 +5,5 @@ class Testpilot.Views.Apps.ListView extends Backbone.Marionette.CompositeView
   getItemView: -> Testpilot.Views.Apps.ListItem
   itemViewContainer: '#apps-list'
   events:
-    'click .js-new-app': -> Testpilot.vent.trigger 'new:app'
+    'click .js-new-app': -> Testpilot.vent.trigger 'apps:new'
 

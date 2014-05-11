@@ -1,4 +1,5 @@
 class AppsController < ApiController
+  include JSONDefault
 
   def index
     @apps = current_user.apps
@@ -6,6 +7,17 @@ class AppsController < ApiController
 
   def show
     @app = current_user.apps.find(params[:id])
+  end
+
+  def create
+    @app = App.new(app_params)
+    @app.assignments.build(user: current_user)
+    if @app.save
+      @app.create_activity :create
+      render status: 201
+    else
+      render json: { errors: @app.errors }, status: 406
+    end
   end
 
   private

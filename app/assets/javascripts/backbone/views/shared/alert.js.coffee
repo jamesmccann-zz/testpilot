@@ -1,9 +1,9 @@
 Testpilot.Views.Shared ||= {}
 
-class Testpilot.Views.Shared.NotificationView extends Backbone.Marionette.ItemView
+class Testpilot.Views.Shared.AlertView extends Backbone.Marionette.ItemView
   DISMISS_DELAY = 5000
 
-  template: 'shared/notification'
+  template: 'shared/alert'
 
   constructor: (@cls, @message) ->
     super()

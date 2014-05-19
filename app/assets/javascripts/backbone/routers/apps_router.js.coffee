@@ -1,21 +1,20 @@
 class Testpilot.Routers.AppsRouter extends Backbone.Marionette.AppRouter
   routes:
-    "index"    : "index"
-    ":id"      : "show"
-    ".*"       : "index"
+    "index"      : "index"
+    ":id"        : "show"
+    "apps/new"   : "new"
 
   index: ->
-    @apps = new Testpilot.Collections.AppsCollection()
-    @apps.fetch
-      success: =>
-        @view = new Testpilot.Views.Apps.ListView(collection: @apps)
-        Testpilot.main.show(@view)
+    new Testpilot.Controllers.Apps.ListController
 
   show: (id) ->
-    app = new Testpilot.Models.App(id: id)
-    app.fetch
-      success: =>
-        @view = new Testpilot.Views.Apps.ShowView(model: app)
-        Testpilot.main.show(@view)
+    new Testpilot.Controllers.Apps.ShowController(id)
+
+  new: ->
+    new Testpilot.Controllers.Apps.NewController
+
+  Testpilot.vent.on 'apps:new', ->
+    new Testpilot.Controllers.Apps.NewController
+
 
 

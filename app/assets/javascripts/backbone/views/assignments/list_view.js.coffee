@@ -1,4 +1,4 @@
-Testpilot.Views.Assignment ||= {}
+Testpilot.Views.Assignments ||= {}
 
 class Testpilot.Views.Assignments.ListView extends Backbone.Marionette.CompositeView
   template: 'assignments/list'
@@ -8,6 +8,10 @@ class Testpilot.Views.Assignments.ListView extends Backbone.Marionette.Composite
   getItemView: -> Testpilot.Views.Assignments.ListItem
   itemViewOptions: ->
     {collection: this.collection}
+
+  events:
+    'submit form#new_assignment': 'addAssignment'
+
   addAssignment: (evt) ->
     evt.preventDefault()
     form = $(evt.target)
@@ -25,8 +29,6 @@ class Testpilot.Views.Assignments.ListView extends Backbone.Marionette.Composite
     @model = @collection.models.filter((assignment) ->
       assignment.attributes.user.id == Testpilot.currentUser.get('id')
     )[0]
-
-
 
   events:
     'submit form#new_assignment': 'addAssignment'

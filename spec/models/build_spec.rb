@@ -7,7 +7,7 @@ describe Build do
 
   describe "valid build" do
     subject do
-      Build.new(:app => App.new(name: "TestApp"), 
+      Build.new(:app => App.new(name: "TestApp"),
                 :apk => File.open(File.join(Rails.root, '/spec/fixtures/apks/test.apk')))
     end
 
@@ -31,7 +31,7 @@ describe Build do
 
   describe "build number" do
     subject do
-      Build.new(:app => App.new(name: "TestApp"), 
+      Build.new(:app => App.new(name: "TestApp"),
                 :apk => File.open(File.join(Rails.root, '/spec/fixtures/apks/test.apk')))
     end
 

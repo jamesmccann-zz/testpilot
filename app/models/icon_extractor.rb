@@ -6,8 +6,11 @@ class IconExtractor
     @apk_dir  = Dir.mktmpdir
     validate_file
     extract_resources
-    parse_manifest
-    find_best_icon
+
+    if File.file?(@apk_dir + "/AndroidManifest.xml")
+      parse_manifest
+      find_best_icon
+    end
   end
 
   private

@@ -11,9 +11,15 @@ class Build < ActiveRecord::Base
   validates :number, presence: true
   validates :apk, presence: true
 
+  after_create :async_icon_extraction
+
   default_scope -> { order('number DESC') }
 
   private
+
+  def async_icon_extraction
+    Resque.enqueue IconExtractionJob, self.id
+  end
 
   def set_build_number
     self.number ||= (app.builds.count rescue 0) + 1

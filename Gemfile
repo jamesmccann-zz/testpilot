@@ -15,6 +15,7 @@ gem 'dotenv-rails'
 gem 'rack-offline'
 gem 'public_activity'
 gem 'dalli'
+gem 'resque'
 
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-sass'

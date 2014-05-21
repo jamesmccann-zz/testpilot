@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Build do
   subject do
-    Build.new
+    build(:build)
   end
 
   describe "valid build" do

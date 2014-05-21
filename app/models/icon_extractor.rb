@@ -20,7 +20,7 @@ class IconExtractor
     end
 
     def extract_resources
-      `apktool decode --no-src --force "#{@apk_file}" "#{@apk_dir}"`
+      system "apktool decode --no-src --force \"#{@apk_file}\" \"#{@apk_dir}\""
     end
 
     def parse_manifest

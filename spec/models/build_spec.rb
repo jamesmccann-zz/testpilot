@@ -29,6 +29,13 @@ describe Build do
     end
   end
 
+  describe "after create" do
+    it "should queue a job to extract icon from the build" do
+      subject.should_receive(:async_icon_extraction)
+      subject.save!
+    end
+  end
+
   describe "build number" do
     subject do
       Build.new(:app => App.new(name: "TestApp"),

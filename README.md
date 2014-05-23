@@ -9,7 +9,11 @@ Welcome to Testpilot!
 2. Run `bundle install`
 3. Run `rake db:setup`
 4. Run `rails server`
+5. Run `rake resque:work`
 5. Open [http://localhost:3000](http://localhost:3000)
+
+> Note: This application requires `apktool` - run `brew install apktool` or `apt-get install apktool` to install.
+
 
 
 #### Uploading builds

@@ -1,5 +1,8 @@
 .app-list-item {
-  padding: 15px;
+  a.media {
+   padding: 15px;
+   &:hover { background: #DDD; color: #333; }
+  }
 
   &:nth-child(odd) {
     background: rgb(56, 61, 64);

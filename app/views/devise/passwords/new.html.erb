@@ -1,7 +1,4 @@
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), method: :post, html: {class: 'form-authentication', role: 'form'}) do |f| %>
-  <h2 class='form-authentication-heading'>
-    Forgot your password?
-  </h2>
   <%= devise_error_messages! %>
   <%= f.email_field :email, autofocus: true, placeholder: 'Email address', required: true, class: 'form-control'%>
 

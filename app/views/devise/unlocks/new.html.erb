@@ -1,7 +1,4 @@
 <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: {method: :post, class: 'form-authentication', role: 'form'}) do |f| %>
-  <h2 class='form-authentication-heading'>
-    Resend unlock instructions
-  </h2>
 
   <%= devise_error_messages! %>
 

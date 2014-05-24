@@ -21,6 +21,8 @@ gem 'font-awesome-sass'
 gem 'marionette-rails'
 gem 'rails-backbone'
 gem 'momentjs-rails'
+gem 'guard'
+gem 'guard-livereload'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -1,0 +1,20 @@
+.sidebar {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(44, 48, 49);
+  border-right: solid 1px #DDD;
+  padding: 0;
+
+  h4 {
+    color: white;
+  }
+}
+
+@media (min-width: 767px) {
+  .sidebar {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}

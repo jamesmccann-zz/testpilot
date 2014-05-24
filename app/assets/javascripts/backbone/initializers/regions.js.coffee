@@ -1,6 +1,7 @@
 Testpilot.addInitializer (options) ->
   Testpilot.addRegions(
-    main: '#testpilot',
+    main: '#main',
     modal: Testpilot.Regions.ModalRegion,
-    alert: '#header-alert'
+    alert: '#header-alert',
+    navigation: '#navigation'
   )

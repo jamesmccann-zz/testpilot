@@ -8,15 +8,30 @@ $blue: rgb(62, 122, 249);
 
 body.authentication {
   padding: 40px auto;
-  background-color: #EEE;
+  background: rgb(44, 48, 49);
+  min-height: 100%;
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100%;
+  }
 
   .auth-container {
-    max-width: 330px;
+    width: 320px;
     padding: 15px;
     margin: 0 auto;
   }
 
+  h1 {
+    @include bangers;
+    color: $blue;
+    text-align: center;
+  }
+
   .form-authentication {
+
     .form-authentication-heading, .checkbox, .btn {
       margin-bottom: 10px;
     }
@@ -29,12 +44,14 @@ body.authentication {
       margin-top: 10px;
     }
 
+    label {
+      color: white;
+      font-size: 16px;
+    }
+
     .form-control {
-      position: relative;
-      height: auto;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
+      margin: 20px auto;
+      height: 3.5em;
       padding: 10px;
       font-size: 16px;
     }

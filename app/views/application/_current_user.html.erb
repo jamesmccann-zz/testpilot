@@ -1,0 +1,19 @@
+<div class='current-user'>
+  <div class="row">
+    <div class="col-xs-8">
+      <%= image_tag avatar_url(current_user), class: 'avatar large' %>
+      <%= current_user.full_name %>
+    </div>
+
+    <div class="col-xs-4 account-links">
+      <%= link_to edit_user_registration_path do %>
+        <%= content_tag :span, 'Edit Account', class: 'sr-only' %>
+        <%= icon :cog, '', title: 'Edit your Account' %>
+      <% end %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= content_tag :span, 'Sign Out', class: 'sr-only' %>
+        <%= icon :unlock, '',  title: 'Sign Out' %>
+      <% end %>
+    </div>
+  </div>
+</div>

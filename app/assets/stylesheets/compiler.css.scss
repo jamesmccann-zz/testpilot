@@ -1,9 +1,11 @@
-@import 'base/spaces';
-@import 'modules/panel';
-@import 'modules/navbar';
-@import 'modules/sign_in_form';
-@import 'modules/change_password_form';
-@import 'modules/assignment_row';
+
+$screen-sm-min: 767px;
+$blue: #0074D9;
+
+
+@mixin bangers {
+  font-family: 'bangers', sans-serif;
+}
 
 /* Override z-index of modal-content to
    ensure that it displays over the top of
@@ -16,3 +18,9 @@
 .modal-footer.modal-footer-left {
   text-align: left;
 }
+
+body {
+  background-color: #F1F1F1;
+  font-size: 14px;
+}
+

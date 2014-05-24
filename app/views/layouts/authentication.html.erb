@@ -6,7 +6,6 @@
 
     <title>Testpilot</title>
 
-    <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Bangers" %>
@@ -19,7 +18,8 @@
         <%= icon :rocket %><br />
         TestPilot
       </h1>
-      <%= render "layouts/partials/alerts" %>
+
+      <%= render "alerts" %>
       <%= yield %>
     </div>
   </div>

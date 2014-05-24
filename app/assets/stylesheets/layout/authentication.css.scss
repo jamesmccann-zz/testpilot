@@ -1,3 +1,11 @@
+@mixin bangers {
+  font-family: 'bangers', sans-serif;
+}
+
+// $blue: #0074D9;
+$blue: rgb(62, 122, 249);
+
+
 body.authentication {
   padding: 40px auto;
   background-color: #EEE;

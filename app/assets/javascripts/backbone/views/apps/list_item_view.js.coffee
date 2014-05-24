@@ -1,6 +1,6 @@
 Testpilot.Views.Apps ||= {}
 
 class Testpilot.Views.Apps.ListItem extends Backbone.Marionette.ItemView
-  tagName: 'div'
+  tagName: 'li'
   template: 'apps/list_item'
-  className: 'list-item-row pam'
+  className: 'app-list-item'

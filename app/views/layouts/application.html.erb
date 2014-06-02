@@ -14,10 +14,44 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
+
   <%= render "layouts/partials/navigation" %>
-  <div class="container">
-    <%= render "layouts/partials/alerts" %>
-    <%= yield %>
+
+  <div class="wrapper">
+    <aside class="main">
+
+      <a class="add">Add new app</a>
+
+      <div class="app">
+        <img class="app-figure" src="https://lh5.ggpht.com/ly6G6lUNHjWKvLgeHO0-ilg7zkEXc-hCWP0Q94gdyCeejWNoDMw6h5buM0pFO0mSDKQ=w300" alt="" width="32" height="32">
+        <p class="app-body">
+          Ike GPS
+        </p>
+      </div>
+
+      <div class="app app-selected">
+        <img class="app-figure" src="https://lh5.ggpht.com/ly6G6lUNHjWKvLgeHO0-ilg7zkEXc-hCWP0Q94gdyCeejWNoDMw6h5buM0pFO0mSDKQ=w300" alt="" width="32" height="32">
+        <p class="app-body">
+          Ike GPS
+        </p>
+      </div>
+
+      <div class="app">
+        <img class="app-figure" src="https://lh5.ggpht.com/ly6G6lUNHjWKvLgeHO0-ilg7zkEXc-hCWP0Q94gdyCeejWNoDMw6h5buM0pFO0mSDKQ=w300" alt="" width="32" height="32">
+        <p class="app-body">
+          Ike GPS
+        </p>
+      </div>
+    </aside>
+
+
+
+
+    <div class="container">
+      <%= render "layouts/partials/alerts" %>
+      <%= yield %>
+    </div>
+
   </div>
 
 </body>

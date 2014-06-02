@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 1px solid $border-colour-light;
+
+  &.app-selected {
+    background: $white;
+  }
+
+  &:hover {
+    background: $white;
+    cursor: pointer;
+  }
+}
+
+.app-figure {
+  margin: 0 1em;
+}
+
+.app-body {
+  flex: 1;
+}

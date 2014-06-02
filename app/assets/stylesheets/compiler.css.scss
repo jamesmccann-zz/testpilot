@@ -1,18 +1,6 @@
-@import 'base/spaces';
-@import 'modules/panel';
-@import 'modules/navbar';
-@import 'modules/sign_in_form';
-@import 'modules/change_password_form';
-@import 'modules/assignment_row';
+@import "compass/reset";
+@import 'base/base';
+@import 'layout/layout';
+@import 'modules/modules';
+@import 'sections/sections';
 
-/* Override z-index of modal-content to
-   ensure that it displays over the top of
-   the backdrop.
-*/
-.modal-content {
-  z-index: 1050;
-}
-
-.modal-footer.modal-footer-left {
-  text-align: left;
-}

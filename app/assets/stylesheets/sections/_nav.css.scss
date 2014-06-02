@@ -1,0 +1,18 @@
+nav.main {
+  background: $primary;
+  border-bottom: 1px solid $border-colour;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+
+  .brand {
+    width: 240px;
+    text-align: center;
+  }
+
+  .account {
+    margin-right: 2em;
+  }
+}

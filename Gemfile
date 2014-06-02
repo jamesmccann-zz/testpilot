@@ -21,6 +21,7 @@ gem 'font-awesome-sass'
 gem 'marionette-rails'
 gem 'rails-backbone'
 gem 'momentjs-rails'
+gem 'spinjs-rails'
 gem 'guard'
 gem 'guard-livereload'
 

@@ -20,5 +20,5 @@
 //= require backbone_datalink
 //= require backbone.marionette
 //= require moment
-//= require backbone/testpilot
+//= require backbone/app
 //= require_self

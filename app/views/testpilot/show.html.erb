@@ -1,9 +1,31 @@
-<%= content_tag :div, '', id: 'modal', class: 'modal', tabindex: -1, role: "dialog", :"aria-labelledby" => "Modal", :"aria-hidden" => true %>
-<%= content_tag :div, '', id: 'header-alert' %>
-<%= content_tag :div, '', id: 'testpilot' %>
+<%#= content_tag :div, '', id: 'modal', class: 'modal', tabindex: -1, role: "dialog", :"aria-labelledby" => "Modal", :"aria-hidden" => true %>
+<%#= content_tag :div, '', id: 'header-alert' %>
+<%#= content_tag :div, '', id: 'testpilot' %>
 
 <script type="text/javascript" charset="utf-8">
-  $(function () {
-    Testpilot.start();
-  });
+  // $(function () {
+  //   Testpilot.start();
+  // });
 </script>
+
+<hgroup>
+  <h1>Ike GPS</h1>
+  <p><strong>13 testers, 64 builds</strong></p>
+</hgroup>
+
+<ul class="nav nav-tabs tab-nav">
+  <li class="active"><a href="#current-build" data-toggle="tab">Build #64</a></li>
+  <li><a href="#permissions" data-toggle="tab">Permissions</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="current-build">
+    Upload date etc
+    Release notes
+  </div>
+
+  <div class="tab-pane" id="permissions">
+    Permissions
+  </div>
+</div>

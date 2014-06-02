@@ -8,6 +8,11 @@
   class Show.Empty extends Marionette.ItemView
     template: 'sidebar/empty_item'
 
+  class Show.Loading extends Marionette.ItemView
+    template: 'sidebar/loading_item'
+    onShow: ->
+      this.$el.find('.spinner').spin('large', 'white')
+
   class Show.App extends Marionette.ItemView
     tagName: 'li'
     template: 'sidebar/app_item'
@@ -16,5 +21,4 @@
     template: 'sidebar/apps_list'
     itemView: Show.App
     itemViewContainer: '#apps-list'
-    emptyView: Show.Empty
 

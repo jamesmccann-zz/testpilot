@@ -4,6 +4,10 @@ body {
   flex-direction: column;
 }
 
+body.authentication {
+  // align-items: center;
+}
+
 .wrapper {
   display: flex;
   flex: 1;

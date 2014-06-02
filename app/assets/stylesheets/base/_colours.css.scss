@@ -5,8 +5,17 @@ $alternative: #4E5559;
 $body: #6F7980;
 $grey: #CCCCCF;
 $white: #FFFFFF;
+$red: #EC7A7A;
+$blue: #7AB1EC;
+$yellow: #ECC17A;
+$green: #67B646;
 
 $border-colour: $grey;
 $border-colour-light: lighten($border-colour, 5%);
 
 $heading-colour: $alternative;
+
+$danger-colour: $red;
+$warning-colour: $yellow;
+$info-colour: $blue;
+$success-colour: $green;

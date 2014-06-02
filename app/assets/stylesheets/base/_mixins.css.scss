@@ -41,3 +41,18 @@
     @content;
   }
 }
+
+@mixin button($colour) {
+  background: $colour;
+  border-bottom: 1px solid darken($colour, 10%);
+}
+
+@mixin border-radius {
+  border-radius: 2px;
+}
+
+@mixin alert($colour) {
+  background: lighten($colour, 10%);
+  border: 1px solid $colour;
+  color: darken($colour, 50%);
+}

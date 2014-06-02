@@ -1,6 +1,6 @@
 @import "compass/reset";
-@import 'base/base';
-@import 'layout/layout';
-@import 'modules/modules';
-@import 'sections/sections';
-
+@import "compass/typography";
+@import 'base/compiler';
+@import 'layout/compiler';
+@import 'modules/compiler';
+@import 'sections/compiler';

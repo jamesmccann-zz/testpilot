@@ -20,5 +20,7 @@
 //= require backbone_datalink
 //= require backbone.marionette
 //= require moment
+//= require spin
+//= require jquery.spin
 //= require backbone/app
 //= require_self

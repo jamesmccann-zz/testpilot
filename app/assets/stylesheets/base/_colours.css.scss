@@ -1,8 +1,12 @@
 $primary: #EBEEF3;
 $secondary: #F5F8FC;
 $highlight: #557FDC;
+$alternative: #4E5559;
+$body: #6F7980;
 $grey: #CCCCCF;
 $white: #FFFFFF;
 
 $border-colour: $grey;
-$border-colour-light: lighten($border-colour, 10%);
+$border-colour-light: lighten($border-colour, 5%);
+
+$heading-colour: $alternative;

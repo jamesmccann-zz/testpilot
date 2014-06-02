@@ -3,4 +3,9 @@
   Show.Controller =
 
     show: ->
-      App.sidebar.show new Show.AppsList
+      @layout = new Show.Layout
+
+      @layout.on 'show', =>
+        @layout.appsRegion.show new Show.AppsList
+
+      App.sidebar.show @layout

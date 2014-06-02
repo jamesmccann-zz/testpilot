@@ -1,5 +1,6 @@
 #= require_tree ./config
 #= require_self
+#= require_tree ./apps
 #= require_tree ./templates
 #= require_tree ./models
 
@@ -16,7 +17,7 @@
     @currentUser.fetch()
 
   App.addInitializer (options) ->
-    #App.module('Sidebar').start()
+    App.module('Sidebar').start()
 
   App.on 'initialize:after', (options) ->
     Backbone.history.start()

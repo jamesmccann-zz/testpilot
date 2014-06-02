@@ -1,8 +1,8 @@
 #= require_tree ./config
 #= require_self
-#= require_tree ./apps
 #= require_tree ./templates
 #= require_tree ./models
+#= require_tree ./apps
 
 @Aldrin = do (Backbone, Marionette) ->
 

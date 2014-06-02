@@ -1,8 +1,10 @@
-class Testpilot.Models.App extends Backbone.Model
-  urlRoot: 'api/apps'
-  paramRoot: 'app'
-  defaults: {}
+@Aldrin.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
 
-class Testpilot.Collections.AppsCollection extends Backbone.Collection
-  model: Testpilot.Models.App
-  url: '/api/apps'
+  class Entities.App extends Backbone.Model
+    urlRoot: 'api/apps'
+    paramRoot: 'app'
+    defaults: {}
+
+  class Entities.AppsCollection extends Backbone.Collection
+    model: Entities.App
+    url: '/api/apps'

@@ -18,7 +18,7 @@
     modal:   Aldrin.Regions.ModalRegion
 
   App.addInitializer (options) ->
-    @currentUser = new Testpilot.Models.User
+    @currentUser = new Aldrin.Models.User
     @currentUser.fetch()
 
   App.addInitializer

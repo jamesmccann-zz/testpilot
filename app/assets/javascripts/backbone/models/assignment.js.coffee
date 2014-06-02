@@ -1,13 +1,15 @@
-class Testpilot.Models.Assignment extends Backbone.Model
-  paramRoot: 'assignment'
-  defaults: {}
+@Aldrin.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
 
-  initialize: (options) ->
-    @app_id = options.app_id
+  class Entities.Assignment extends Backbone.Model
+    paramRoot: 'assignment'
+    defaults: {}
 
-class Testpilot.Collections.AssignmentsCollection extends Backbone.Collection
-  model: Testpilot.Models.Assignment
-  url: -> "api/apps/#{@app_id}/assignments"
+    initialize: (options) ->
+      @app_id = options.app_id
 
-  initialize: (options) ->
-    @app_id = options.app_id
+  class Entities.AssignmentsCollection extends Backbone.Collection
+    model: Entities.Assignment
+    url: -> "api/apps/#{@app_id}/assignments"
+
+    initialize: (options) ->
+      @app_id = options.app_id

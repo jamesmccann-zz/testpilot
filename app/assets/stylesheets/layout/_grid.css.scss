@@ -1,14 +1,13 @@
 body {
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-
-body.authentication {
-  // align-items: center;
+  -ms-flex-direction: column;
 }
 
 .wrapper {
+  display: -ms-flexbox;
   display: flex;
   flex: 1;
 }

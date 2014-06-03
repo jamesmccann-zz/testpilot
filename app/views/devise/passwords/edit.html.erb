@@ -2,7 +2,7 @@
   <h1>Change your password</h1>
 </hgroup>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), method: :put, role: 'form'}) do |f| %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), method: :put, role: 'form') do |f| %>
   <%= f.hidden_field :reset_password_token %>
 
   <%= devise_error_messages! %>

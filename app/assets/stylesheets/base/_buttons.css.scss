@@ -1,0 +1,25 @@
+.button {
+  border: 0;
+  background: 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  padding: 0.75em 1.5em;
+  margin-bottom: 1em;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include button($grey);
+  @include border-radius;
+}
+
+.button-primary {
+  @include button($highlight);
+  color: $white;
+}

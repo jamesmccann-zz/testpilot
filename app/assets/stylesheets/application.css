@@ -9,14 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap
- *= require font-awesome
  *= require compiler
- *= require_tree .
  */
-
- body {
-  height: 100%;
-  width: 100%;
-  padding-top: 50px;
- }

@@ -1,0 +1,12 @@
+aside.main {
+  width: 240px;
+  background: $secondary;
+
+  .add {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $border-colour-light;
+  }
+}

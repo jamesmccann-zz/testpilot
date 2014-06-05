@@ -3,7 +3,7 @@
   class Show.Layout extends Marionette.Layout
     template: 'sidebar/layout'
     regions:
-      appsRegion: '#apps-region'
+      appsRegion: '.apps-list'
 
   class Show.Empty extends Marionette.ItemView
     template: 'sidebar/empty_item'
@@ -14,11 +14,9 @@
       this.$el.find('.spinner').spin('large', 'white')
 
   class Show.App extends Marionette.ItemView
-    tagName: 'li'
     template: 'sidebar/app_item'
 
-  class Show.AppsList extends Marionette.CompositeView
-    template: 'sidebar/apps_list'
+  class Show.AppsList extends Marionette.CollectionView
     itemView: Show.App
-    itemViewContainer: '#apps-list'
+    itemViewContainer: '.apps-list'
 

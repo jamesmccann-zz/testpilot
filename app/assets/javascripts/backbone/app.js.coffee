@@ -9,8 +9,8 @@
   App = new Marionette.Application()
 
   App.addRegions
-    main:    '#main-region'
-    sidebar: '#sidebar-region'
+    main:    'section.main'
+    sidebar: 'aside.main'
 
   App.addInitializer (options) ->
     @currentUser = new Aldrin.Entities.User

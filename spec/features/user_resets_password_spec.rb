@@ -5,7 +5,7 @@ feature 'User requests password reset' do
 
   scenario 'requesting password' do
     visit new_user_password_path
-    fill_in 'Email address', with: user.email
+    fill_in 'Email', with: user.email
     click_button 'Send reset password instructions'
     expect(page).to have_content 'You will receive an email with instructions on how to reset your password in a few minutes.'
   end

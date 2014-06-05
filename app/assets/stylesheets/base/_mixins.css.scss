@@ -1,0 +1,58 @@
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin keyframe ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin button($colour) {
+  background: $colour;
+  border-bottom: 1px solid darken($colour, 10%);
+}
+
+@mixin border-radius {
+  border-radius: 2px;
+}
+
+@mixin alert($colour) {
+  background: lighten($colour, 10%);
+  border: 1px solid $colour;
+  color: darken($colour, 50%);
+}

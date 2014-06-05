@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe Build do
   subject do
-    Build.new
+    build(:build)
   end
 
   describe "valid build" do
     subject do
-      Build.new(:app => App.new(name: "TestApp"), 
+      Build.new(:app => App.new(name: "TestApp"),
                 :apk => File.open(File.join(Rails.root, '/spec/fixtures/apks/test.apk')))
     end
 
@@ -29,9 +29,16 @@ describe Build do
     end
   end
 
+  describe "after create" do
+    it "should queue a job to extract icon from the build" do
+      subject.should_receive(:async_icon_extraction)
+      subject.save!
+    end
+  end
+
   describe "build number" do
     subject do
-      Build.new(:app => App.new(name: "TestApp"), 
+      Build.new(:app => App.new(name: "TestApp"),
                 :apk => File.open(File.join(Rails.root, '/spec/fixtures/apks/test.apk')))
     end
 

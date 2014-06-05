@@ -1,9 +1,9 @@
-<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:class => 'form-authentication', :method => :post} do |f| %>
-  <%= devise_error_messages! %>
+<hgroup>
+  <h1><%= t "devise.invitations.new.header" %></h1>
+</hgroup>
 
-  <h2 class='form-authentication-heading'>
-    <%= t "devise.invitations.new.header" %>
-  </h2>
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :method => :post} do |f| %>
+  <%= devise_error_messages! %>
 
   <div class="alert alert-info">
     <p>
@@ -15,9 +15,9 @@
     </p>
   </div>
 
-
   <%= devise_error_messages! %>
-  <%= f.email_field :email, autofocus: true, placeholder: 'Email address', required: true, class: 'form-control'%>
 
-  <%= f.submit t("devise.invitations.new.submit_button"), data: {confirm: 'Are you sure you want to invite this person?'}, class: 'btn btn-lg btn-primary btn-block' %>
+  <%= f.email_field :email, autofocus: true, placeholder: 'Email', required: true, class: 'form-control input-block' %>
+
+  <%= f.submit t("devise.invitations.new.submit_button"), data: {confirm: 'Are you sure you want to invite this person?'}, class: 'button button-primary' %>
 <% end %>

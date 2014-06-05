@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $body;
+}
+
+a {
+  color: $highlight;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($highlight, 25%);
+    cursor: pointer;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: $heading-colour;
+}
+
+h1      { font-size: 2em;       /* 2*16 = 32 */         }
+h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
+h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
+
+hgroup {
+  margin-bottom: 2em;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+small {
+  font-size: 12px;
+}

@@ -1,23 +1,21 @@
-
-
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), method: :put, html: {class: 'form-authentication form-change-password', role: 'form'}) do |f| %>
-  <%= f.hidden_field :invitation_token %>
-
-  <h2 class='form-authentication-heading'>
+<hgroup>
+  <h1>
     <%= t 'devise.invitations.edit.header' %>
-  </h2>
+  </h1>
+</hgroup>
+
+<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), method: :put, role: 'form'}) do |f| %>
+  <%= f.hidden_field :invitation_token %>
 
   <%= devise_error_messages! %>
 
-  <%= f.text_field :full_name, autofocus: true, placeholder: 'Full Name', required: true, class: 'form-control' %>
+  <%= f.text_field :full_name, autofocus: true, placeholder: 'Full Name', required: true, class: 'form-control input-block' %>
+
   <%= form_help 'Your full name, e.g. John Doe' %>
 
-  <%= f.password_field :password, placeholder: 'Password', autocomplete: 'off', required: true, class: 'form-control'%>
+  <%= f.password_field :password, placeholder: 'Password', autocomplete: 'off', required: true, class: 'form-control input-block'%>
 
-  <%= f.password_field :password_confirmation, placeholder: 'Confirm password', autocomplete: 'off', required: true, class: 'form-control'%>
+  <%= f.password_field :password_confirmation, placeholder: 'Confirm password', autocomplete: 'off', required: true, class: 'form-control input-block' %>
 
-  <%= f.submit t("devise.invitations.edit.submit_button"), class: 'btn btn-lg btn-primary btn-block' %>
-
+  <%= f.submit t("devise.invitations.edit.submit_button"), class: 'button button-primary' %>
 <% end %>
-
-

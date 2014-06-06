@@ -14,3 +14,19 @@
 
     initialize: (options) ->
       @app_id = options.app_id
+
+  App.reqres.setHandler 'entities:app:builds', (app_id) ->
+    defer = $.Deferred()
+    builds = new Entities.BuildsCollection(app_id: app_id)
+    builds.fetch
+      success: ->
+        defer.resolve(builds)
+    defer.promise()
+
+  App.reqres.setHandler 'entities:app:build', (app_id, id) ->
+    defer = $.Deferred()
+    build = new Entities.Build(app_id: app_id, id: id)
+    build.fetch
+      success: ->
+        defer.resolve(build)
+    defer.promise()

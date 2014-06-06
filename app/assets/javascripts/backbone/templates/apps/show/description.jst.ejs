@@ -4,5 +4,5 @@
 
 <hgroup>
   <h1><%= name %></h1>
-  <p><strong>13 testers, 64 builds</strong></p>
+  <p><strong><%= build_count == 1 && '1 build' || build_count + ' builds' %></strong></p>
 </hgroup>

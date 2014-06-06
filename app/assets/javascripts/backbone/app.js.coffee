@@ -1,6 +1,7 @@
 #= require_tree ./config
 #= require_self
 #= require_tree ./templates
+#= require_tree ./controllers
 #= require_tree ./models
 #= require_tree ./apps
 

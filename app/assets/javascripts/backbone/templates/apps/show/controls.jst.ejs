@@ -1,5 +1,7 @@
 <ul class="nav nav-tabs tab-nav">
-  <li class="active"><a href="#app-current-build-region" data-toggle="tab">Build #<%= currentBuildNumber() %></a></li>
+  <% if (typeof latest_build != 'undefined') { %>
+    <li class="active"><a href="#app-current-build-region" data-toggle="tab">Build #<%= currentBuildNumber() %></a></li>
+  <% } %>
   <li><a href="#app-builds-region" data-toggle="tab">Builds</a></li>
   <li><a href="#app-permissions-region" data-toggle="tab">Permissions</a></li>
 </ul>

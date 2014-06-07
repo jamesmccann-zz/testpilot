@@ -8,7 +8,5 @@
         showListView.call(this, builds)
 
     showListView = (builds) ->
-      console.log "showing builds list"
-      console.log builds
       @region.show new List.BuildsList(collection: builds)
 

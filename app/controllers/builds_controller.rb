@@ -13,7 +13,6 @@ class BuildsController < ApplicationController
   end
 
   def show
-    send_file @build.apk.file.path
   end
 
   def create

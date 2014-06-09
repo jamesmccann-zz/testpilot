@@ -4,23 +4,26 @@
 
     show: (id) ->
       appRequest = App.request "entities:app", id
-      appRequest.done (app) =>
-        showControlsView.call(this, app)
-        showDescriptionView.call(this, app)
-        showBuildsList.call(this, app)
-        showCurrentBuild.call(this, app)
-
       @layout = new Show.Layout
-      App.main.show @layout
 
-  showControlsView = (app) ->
-    @layout.controls.show new Show.Controls(model: app)
+      appRequest.done (@app) =>
+        @layout.model = @app
+        App.main.show @layout
+        showCurrentBuild.call(this)
 
-  showDescriptionView = (app) ->
-    @layout.description.show new Show.Description(model: app)
+      @layout.on 'show', =>
+        showDescriptionView.call(this)
+        showBuildsList.call(this)
 
-  showCurrentBuild = (app) ->
-    App.execute 'app:builds:show', app, app.get('latest_build').id, @layout.current_build
+  showControlsView = ->
+    @layout.controls.show new Show.Controls(model: @app)
 
-  showBuildsList = (app) ->
-    App.execute 'app:builds:list', app, @layout.builds
+  showDescriptionView = ->
+    @layout.description.show new Show.Description(model: @app)
+
+  showCurrentBuild = ->
+    if @app.get('latest_build')
+      App.execute 'app:builds:show', @app, @app.get('latest_build').id, @layout.current_build
+
+  showBuildsList = ->
+    App.execute 'app:builds:list', @app, @layout.builds

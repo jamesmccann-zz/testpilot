@@ -7,10 +7,9 @@
       description: '#app-description-region'
       builds: '#app-builds-region'
       current_build: '#app-current-build-region'
-
-  class Show.Controls extends Marionette.ItemView
-    template: 'apps/show/controls'
     templateHelpers:
+      hasCurrentBuild: ->
+        this.latest_build
       currentBuildNumber: ->
         this.latest_build.number
 

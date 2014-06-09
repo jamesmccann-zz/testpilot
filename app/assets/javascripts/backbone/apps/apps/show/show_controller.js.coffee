@@ -14,6 +14,7 @@
       @layout.on 'show', =>
         showDescriptionView.call(this)
         showBuildsList.call(this)
+        showAssignmentsList.call(this)
 
   showControlsView = ->
     @layout.controls.show new Show.Controls(model: @app)
@@ -27,3 +28,6 @@
 
   showBuildsList = ->
     App.execute 'app:builds:list', @app, @layout.builds
+
+  showAssignmentsList = ->
+    App.execute 'app:assignments:list', @app, @layout.assignments

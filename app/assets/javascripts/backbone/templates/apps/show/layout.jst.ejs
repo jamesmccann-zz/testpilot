@@ -7,8 +7,8 @@
     <% if (hasCurrentBuild()) { %>
       <li class="active"><a href="#app-current-build-region" data-toggle="tab">Build #<%= currentBuildNumber() %></a></li>
     <% } %>
-    <li class="<%= hasCurrentBuild() ? '' : 'active' %>"><a href="#app-builds-region" data-toggle="tab">Builds</a></li>
-    <li><a href="#app-permissions-region" data-toggle="tab">Permissions</a></li>
+    <li class="<%= hasCurrentBuild() ? '' : 'active' %>"><a href="#app-builds-region" data-toggle="tab">Past Builds</a></li>
+    <li><a href="#app-assignments-region" data-toggle="tab">Permissions</a></li>
   </ul>
 </div>
 
@@ -17,6 +17,6 @@
     <div class="tab-pane active" id="app-current-build-region"></div>
   <% } %>
   <div class="tab-pane <%= hasCurrentBuild() ? '' : 'active' %>" id="app-builds-region"></div>
-  <div class="tab-pane" id="app-permissions-region"></div>
+  <div class="tab-pane" id="app-assignments-region"></div>
 </div>
 

@@ -13,3 +13,12 @@
 
     initialize: (options) ->
       @app_id = options.app_id
+
+  App.reqres.setHandler "entities:app:assignments", (app_id) ->
+    defer = $.Deferred()
+    assignments = new Entities.AssignmentsCollection(app_id: app_id)
+    assignments.fetch
+      success: ->
+        defer.resolve(assignments)
+    defer.promise()
+

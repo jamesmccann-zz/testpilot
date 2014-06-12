@@ -4,12 +4,12 @@
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 # Don't declare `role :all`, it's a meta role
-role :app, %w{pilot@fly.testpilotapp.com}
-role :web, %w{pilot@fly.testpilotapp.com}
-role :db,  %w{pilot@fly.testpilotapp.com}
+role :app, %w{pilot@new.fly.testpilotapp.com}
+role :web, %w{pilot@new.fly.testpilotapp.com}
+role :db,  %w{pilot@new.fly.testpilotapp.com}
 
 
-set :ssh_options, {forward_agent: true, port: 2222}
+set :ssh_options, {forward_agent: true, port: 22}
 
 # Extended Server Syntax
 # ======================

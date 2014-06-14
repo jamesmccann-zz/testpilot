@@ -4,15 +4,15 @@
     paramRoot: 'assignment'
     defaults: {}
 
-    initialize: (options) ->
-      @app_id = options.app_id
-
   class Entities.AssignmentsCollection extends Backbone.Collection
     model: Entities.Assignment
     url: -> "api/apps/#{@app_id}/assignments"
 
     initialize: (options) ->
       @app_id = options.app_id
+
+  App.reqres.setHandler "entities:app:assignment:new", (app_id) ->
+    new Entities.Assignment()
 
   App.reqres.setHandler "entities:app:assignments", (app_id) ->
     defer = $.Deferred()

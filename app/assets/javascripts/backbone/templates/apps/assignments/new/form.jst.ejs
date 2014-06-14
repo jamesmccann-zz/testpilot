@@ -1,20 +1,17 @@
-<div class="assignments-list">
-</div>
-
 <form id="new_assignment" class="form-inline">
   <h4>Allow access to this application:</h4>
   <p>
     Enter an email address below to allow access this application. If they
-    are not already a Testpilot user, they will be invited to sign up.
+    are not already an Aldrin user, they will be invited to sign up.
   <div class="form-group">
     <label for="assignment[email]" class="sr-only">Email address</label>
-    <input type="email" required="required" id="assignment_email" name="assignment[email]" placeholder="Email address" class="form-control">
+    <input type="email" required="required" id="assignment_email" name="email" placeholder="Email address" class="form-control">
   </div>
 
   <div class="form-group mlm mrm">
     <label>
-      <input type="hidden" name="assignment[developer]" value="false" />
-      <input type="checkbox" name="assignment[developer]" value="true" />
+      <input type="hidden" name="developer" value="false" />
+      <input type="checkbox" name="developer" value="true" />
       Developer?
     </label>
   </div>

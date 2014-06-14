@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    backbone-syphon-rails (0.4.1.2)
     bcrypt (3.1.7)
     builder (3.2.2)
     capistrano (3.2.0)
@@ -276,6 +277,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  backbone-syphon-rails
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv

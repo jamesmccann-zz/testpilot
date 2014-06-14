@@ -14,6 +14,15 @@ Welcome to Testpilot!
 
 > Note: This application requires `apktool` - run `brew install apktool` or `apt-get install apktool` to install.
 
+#### Running tests
+
+There are two test suites - one, Rspec, covering unit testing of models and controllers, and another that is test-unit based performing performance tests.
+
+Testing scenarios:
+
+1. When hacking on code, `rake spec` is sufficient.
+2. Run `rake test:benchmark` before and after you start coding so you can see the impact of your changes. If you add a new resource, add some perf. tests for it.
+3. If you want to run all the tests, run `rake spec test:benchmark`
 
 
 #### Uploading builds

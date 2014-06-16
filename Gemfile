@@ -33,5 +33,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'highline' # To suppress key entry in capistrano
   gem 'debugger'
+  gem 'rails-perftest'
+  gem 'ruby-prof', platforms: :mri
 end
 

@@ -49,7 +49,7 @@ class BuildsController < ApplicationController
       success = build_token && @app = App.find_by_build_token(build_token.to_s)
 
       if !success
-        raise ActionController::Forbidden
+        raise ActiveRecord::RecordNotFound
       end
     end
 

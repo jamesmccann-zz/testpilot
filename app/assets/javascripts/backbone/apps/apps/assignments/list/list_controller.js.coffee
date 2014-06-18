@@ -21,7 +21,6 @@
       listView = new List.AssignmentsList(collection: @assignments)
 
       @listenTo listView, 'itemview:assignment:destroy', (item, args) ->
-        debugger
         args.model.destroy()
 
       @layout.list.show listView

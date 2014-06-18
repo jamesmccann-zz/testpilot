@@ -2,7 +2,6 @@
 
   class Entities.Assignment extends Backbone.Model
     paramRoot: 'assignment'
-    defaults: {}
 
   class Entities.AssignmentsCollection extends Backbone.Collection
     model: Entities.Assignment

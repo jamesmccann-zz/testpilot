@@ -9,6 +9,8 @@
       formView = new New.Form(model: @assignment)
       @listenTo formView, 'form:submitted', =>
         @assignments.create(
+          @assignment.attributes,
+          wait: true,
           success: =>
             formView.reset()
           error: (assignment, response) =>

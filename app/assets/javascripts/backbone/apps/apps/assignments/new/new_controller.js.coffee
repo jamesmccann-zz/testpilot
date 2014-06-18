@@ -12,9 +12,9 @@
           @assignment.attributes,
           wait: true,
           success: =>
-            formView.reset()
+            formView.onSubmitSuccess()
           error: (assignment, response) =>
-            formView.error(response)
+            formView.onSubmitFailure(response)
         )
 
       @region.show formView

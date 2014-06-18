@@ -6,16 +6,22 @@
     events:
       'submit form': 'formSubmitted'
 
+    ui:
+      form: 'form#new-assignment'
+      email: 'input[name=email]'
+      developer: 'input[name=developer]'
+
     formSubmitted: (evt) ->
       evt.preventDefault()
       data = Backbone.Syphon.serialize(this)
       @model.set(data)
       @trigger 'form:submitted', @model
 
-    reset: ->
-      console.log 'reset'
+    onSubmitSuccess: ->
+      @ui.form[0].reset()
 
-    error: (response) ->
+    onSubmitFailure: (response) ->
+      #TODO: error UI
       console.log 'error'
 
 

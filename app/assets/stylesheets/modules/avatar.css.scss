@@ -1,0 +1,28 @@
+.avatar {
+  border-radius: 50%;
+  border: solid 3px white;
+
+  &.small {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+
+  &.medium {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+  }
+
+  &.large {
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+  }
+
+  &.xx-large {
+    width: 128px;
+    height: 128px;
+    margin-right: 10px;
+  }
+}

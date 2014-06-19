@@ -1,4 +1,4 @@
-class Testpilot.Regions.ModalRegion extends Backbone.Marionette.Region
+class Aldrin.Regions.ModalRegion extends Backbone.Marionette.Region
   el: '#modal'
 
   constructor: ->

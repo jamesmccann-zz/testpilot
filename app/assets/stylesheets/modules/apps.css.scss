@@ -1,0 +1,19 @@
+.app-list-item {
+  a.media {
+   padding: 15px;
+   &:hover { background: #DDD; color: #333; }
+  }
+
+  &:nth-child(odd) {
+    background: rgb(56, 61, 64);
+  }
+
+  .media-heading {
+    margin: 0;
+    line-height: 48px;
+  }
+}
+
+.nav-header {
+  padding: 15px 20px;
+}

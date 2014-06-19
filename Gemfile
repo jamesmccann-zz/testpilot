@@ -17,11 +17,14 @@ gem 'public_activity'
 gem 'dalli'
 gem 'resque'
 
-gem 'bootstrap-sass-rails'
-gem 'font-awesome-sass'
+gem 'compass-rails', '1.1.0.pre'
 gem 'marionette-rails'
 gem 'rails-backbone'
+gem 'backbone-syphon-rails'
 gem 'momentjs-rails'
+gem 'spinjs-rails'
+gem 'guard'
+gem 'guard-livereload'
 
 group :development, :test do
   gem 'rspec-rails'

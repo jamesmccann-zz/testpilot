@@ -6,17 +6,19 @@
 
     <title>Testpilot</title>
 
-    <%= render "layouts/partials/device_tags" %>
-    <%= render "layouts/partials/favicons" %>
+    <%= render "device_tags" %>
+    <%= render "favicons" %>
 
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Bangers" %>
     <%= csrf_meta_tags %>
 </head>
 <body>
+
   <%= render "layouts/partials/navigation" %>
-  <div class="container">
-    <%= render "layouts/partials/alerts" %>
+  <%= render "layouts/partials/alerts" %>
+  <div class="wrapper">
     <%= yield %>
   </div>
 

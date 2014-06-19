@@ -1,0 +1,24 @@
+.current-user {
+  background-color: rgb(62, 122, 249);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 125%;
+  font-weight: 500;
+
+  .account-links {
+    line-height: 48px;
+    font-size: 150%;
+
+    a {
+      color: white;
+      margin-left: 5px;
+      &:active, &:hover {
+        color: darken(white, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+
+}

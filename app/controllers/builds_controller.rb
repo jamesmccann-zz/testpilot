@@ -7,13 +7,24 @@ class BuildsController < ApplicationController
   before_action :assign_app, only: [:index, :show]
   before_action :assign_build, only: [:show]
 
+  skip_before_action :assert_valid_format!, only: :show
+
   def index
     @builds = @app.builds
     render
   end
 
   def show
-    send_file @build.apk.file.path
+    respond_to do |format|
+      format.json { render }
+      format.apk  do
+        send_file(
+          @build.apk.path,
+          content_type: 'application/vnd.android.package-archive',
+          filename: @build.apk.file.filename
+        )
+      end
+    end
   end
 
   def create

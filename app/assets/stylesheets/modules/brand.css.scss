@@ -1,0 +1,18 @@
+$blue: #0074D9;
+@mixin bangers {
+  font-family: 'bangers', sans-serif;
+}
+
+.brand {
+  display: block;
+  height: 75px;
+  color: $blue;
+  @include bangers();
+  text-align: center;
+  font-size: 300%;
+  line-height: 75px;
+
+  &:hover, &:active {
+    text-decoration: none;
+  }
+}

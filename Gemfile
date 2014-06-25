@@ -17,14 +17,17 @@ gem 'public_activity'
 gem 'dalli'
 gem 'resque'
 
-gem 'compass-rails', '1.1.0.pre'
+gem 'compass-rails'
 gem 'marionette-rails'
 gem 'rails-backbone'
 gem 'backbone-syphon-rails'
 gem 'momentjs-rails'
 gem 'spinjs-rails'
-gem 'guard'
-gem 'guard-livereload'
+
+group :development do
+  gem 'guard'
+  gem 'guard-livereload'
+end
 
 group :development, :test do
   gem 'rspec-rails'

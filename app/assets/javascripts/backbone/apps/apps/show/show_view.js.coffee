@@ -1,6 +1,6 @@
 @Aldrin.module 'Apps.Show', (Show, App, Backbone, Marionette, $, _) ->
 
-  class Show.Layout extends Marionette.Layout
+  class Show.Layout extends Marionette.LayoutView
     template: 'apps/show/layout'
 
     regions:

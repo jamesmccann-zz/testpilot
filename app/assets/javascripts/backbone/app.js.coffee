@@ -20,7 +20,7 @@
   App.addInitializer (options) ->
     App.module('Sidebar').start()
 
-  App.on 'initialize:after', (options) ->
+  App.on 'start', (options) ->
     Backbone.history.start()
 
   App

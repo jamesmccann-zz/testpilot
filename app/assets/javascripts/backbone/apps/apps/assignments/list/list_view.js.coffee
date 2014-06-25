@@ -1,6 +1,6 @@
 @Aldrin.module 'Apps.Assignments.List', (List, App, Backbone, Marionette, $, _) ->
 
-  class List.Layout extends Marionette.Layout
+  class List.Layout extends Marionette.LayoutView
     template: 'apps/assignments/list/layout'
     regions:
       list: '#assignments-list-region'
@@ -15,8 +15,8 @@
       'click .js-remove-assignment': 'assignment:destroy'
 
   class List.AssignmentsList extends Marionette.CollectionView
-    itemViewContainer: '.assignments-list'
-    itemView: List.Assignment
+    childViewContainer: '.assignments-list'
+    childView: List.Assignment
     emptyView: List.Empty
 
 

@@ -1,6 +1,6 @@
 @Aldrin.module 'Sidebar.Show', (Show, App, Backbone, Marionette, $, _) ->
 
-  class Show.Layout extends Marionette.Layout
+  class Show.Layout extends Marionette.LayoutView
     template: 'sidebar/layout'
     regions:
       appsRegion: '.apps-list'
@@ -17,6 +17,6 @@
     template: 'sidebar/app_item'
 
   class Show.AppsList extends Marionette.CollectionView
-    itemView: Show.App
-    itemViewContainer: '.apps-list'
+    childView: Show.App
+    childViewContainer: '.apps-list'
 

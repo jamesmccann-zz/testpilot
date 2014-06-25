@@ -7,6 +7,6 @@
     template: 'apps/builds/list/build_item'
 
   class List.BuildsList extends Marionette.CollectionView
-    itemView: List.Build
+    childView: List.Build
     emptyView: List.Empty
 

@@ -20,7 +20,7 @@
     showListView = ->
       listView = new List.AssignmentsList(collection: @assignments)
 
-      @listenTo listView, 'itemview:assignment:destroy', (item, args) ->
+      @listenTo listView, 'childview:assignment:destroy', (item, args) ->
         args.model.destroy()
 
       @layout.list.show listView

@@ -3,4 +3,6 @@ test:
   :url_host: 'localhost:3000'
 development:
   :delivery_method: :smtp
-  :host: "localhost:1025"
+  :host: "localhost"
+  :port: 1025,
+  :url_host: 'http://testpilot.dev'

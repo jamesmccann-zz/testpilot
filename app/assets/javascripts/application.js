@@ -18,7 +18,10 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require backbone-syphon
 //= require backbone.marionette
 //= require moment
-//= require backbone/testpilot
+//= require spin
+//= require jquery.spin
+//= require backbone/app
 //= require_self

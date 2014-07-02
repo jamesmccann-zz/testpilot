@@ -7,16 +7,13 @@ class App < ActiveRecord::Base
   has_many :builds
   has_many :assignments
   has_many :users, through: :assignments
+  has_one :latest_build, -> { order('number DESC') }, class_name: 'Build'
 
   validates :name, presence: true
   validates :build_token, presence: true, uniqueness: true
   before_validation :assign_build_token, on: :create
 
   mount_uploader :icon, ApplicationIconUploader
-
-  def latest_build
-    builds.last
-  end
 
   def regenerate_build_token!
     update!(build_token: generate_build_token)

@@ -30,11 +30,11 @@ describe BuildsController do
       controller.stub(:render)
     end
 
-    subject { get :show, app_id: 1, id: 1 }
+    subject { get :show, app_id: 1, id: 1, format: :apk }
 
     it { subject; expect(assigns(:build)).to eq build }
     it { subject; expect(response).to be_success }
-    it { controller.should_receive(:send_file).with(build.apk.file.path); subject }
+    it { controller.should_receive(:send_file).with(build.apk.file.path, an_instance_of(Hash)); subject }
   end
 
   describe "POST create" do

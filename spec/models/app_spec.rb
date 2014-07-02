@@ -25,6 +25,10 @@ describe App do
     expect(App.reflect_on_association(:users).macro).to eq :has_many
   end
 
+  it 'should have a latest build' do
+    expect(App.reflect_on_association(:latest_build).macro).to eq :has_one
+  end
+
   it "should generate a build token" do
     app.build_token.clear
     expect { app.valid? }.to change(app, :build_token)
@@ -39,13 +43,6 @@ describe App do
       app.id = 1
       app.name = "Test & App"
       expect(app.to_param).to eq("1-test-app")
-    end
-  end
-
-  describe ".latest_build" do
-    it "should return the last build" do
-      app.builds.should_receive(:last)
-      app.latest_build
     end
   end
 
